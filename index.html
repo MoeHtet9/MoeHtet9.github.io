@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+
+        /*////body////*/
+        body{
+
+            min-height: 100vh;
+
+            background: linear-gradient(180deg, #061321, #0B1D33);
+
+            padding: 25px;
+
+        }
+
+        /*////Task Bar////*/
+        .taskbar{
+
+            background-color: rgba(51, 198, 247, 0.1);
+
+            backdrop-filter: blur(10px);
+
+            display: flex;
+
+            position: fixed;
+
+            top: 0;
+
+            right: 0;
+
+            left: 0;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 10px;
+
+            animation: popup1 .9s ease;
+
+        }
+
+        .taskbar h1{
+
+            font-size: 1.5em;
+
+            color: white;
+
+            margin: 0;
+
+        }
+
+        .taskbar .menu{
+
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+        .taskbar .menu a{
+
+            display: flex;
+
+            text-decoration: none;
+
+            margin-left: 25px;
+
+            color: #ffffff;
+
+            transition: .4s;
+
+        }
+
+        .taskbar .menu a:hover{
+
+            border-bottom: 2px dotted #00BFFF;
+
+            transform: translateY(-2px);
+            transition: .4s;
+
+        }
+
+        .taskbar .menu a:active{
+
+            color: #00BFFF;
+
+            transform: scale(.95);
+        }
+
+        .taskbar .l_d_cv{
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .taskbar .l_d_cv .theme{
+
+            display: flex;
+
+            width: 70px;
+
+            height: 35px;
+
+            margin-right: 10px;
+
+            border: .4px solid #00BFFF;
+
+            border-radius: 50px;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            transition: .3s;
+
+        }
+
+        .taskbar .l_d_cv .theme button{
+
+            background: none;
+
+            border: none;
+
+            cursor: pointer;
+
+            padding: 12px;
+
+        }
+
+        .taskbar .l_d_cv .theme button:hover{
+
+            background-color: rgba(242, 236, 236, 0.1);
+        }
+
+        .taskbar .l_d_cv .theme .theme_Btn1 i{
+
+            color: #ffffff;
+
+            transition: .4s;
+
+        }
+
+        .taskbar .l_d_cv .theme .theme_Btn2 i,
+        .taskbar .l_d_cv .theme .theme_Btn2{
+
+            color: #00BFFF;
+
+            border-bottom: 2px solid #007bff;
+
+            transition: .4s;
+
+        }
+
+        .taskbar .l_d_cv a{
+
+            text-decoration: none;
+
+            background-color: #00BFFF;
+
+            color: #ffffff;
+
+            border: .4px solid #061321;
+
+            border-radius: 10px;
+
+            padding: 10px;
+
+            transition: .3s;
+
+        }
+
+        .taskbar .l_d_cv a:hover{
+
+            color: #061321;
+
+            transform: translateY(-3px);
+            transition: .3s;
+
+        }
+
+        .taskbar .l_d_cv a:active{
+
+            transform: scale(.97);
+            transition: .4s;
+
+        }
+
+        /*////Home////*/
+        .home{
+
+            padding: 20px;
+
+            display: flex;
+
+            grid-template-columns: 1fr 1fr;
+
+            min-height: 80vh;
+
+            margin-top: 40px;
+
+        }
+
+        /*Left Pannel*/
+        .home .left_pannel{
+
+            width: 50%;
+
+            padding: 20px;
+
+            animation: popup2 1s ease;
+
+        }
+
+        .home .left_pannel p{
+
+            color: #ffffff;
+
+            font-size: 1.5em;
+        }
+
+        .home .left_pannel h1{
+
+            color: #ffffff;
+
+            font-size: 3em;
+
+        }
+
+        .home .left_pannel h1 span,
+        .home .left_pannel h4{
+
+            color: #00BFFF;
+
+        }
+
+        .home .left_pannel button{
+
+            background-color: #061321;
+
+            color: #ffffff;
+
+            border: 0.3px solid #00BFFF;
+
+            border-radius: 5px;
+
+            padding: 10px;
+
+            transition: .3s;
+
+        }
+
+        .home .left_pannel button:hover{
+
+            background-color: #007bff;
+
+            color: #ffffff;
+
+            transform: translateY(-3px);
+            transition: .3s;
+
+        }
+
+        .home .left_pannel button:active{
+
+            transform: scale(.97);
+            transition: .3s;
+
+        }
+
+        .left_pannel .left_pannel_menu{
+
+            display: flex;
+
+            margin-top: 20px;
+
+        }
+
+        .left_pannel .left_pannel_menu a{
+
+            border: 1px solid #00BFFF;
+
+            border-radius: 50px;
+
+            padding: 8px;
+
+            margin-right: 25px;
+
+            background-color: #061321;
+
+            color: #ffffff;
+
+            transition: .3s;
+
+        }
+
+        .left_pannel .left_pannel_menu a:hover{
+
+            border-color: #ffffff;
+
+            transform: translateY(-3px);
+            transition: .3s;
+
+        }
+
+        .left_pannel .left_pannel_menu a:active{
+
+            transform: scale(.97);
+            transition: .3s;
+
+        }
+
+        /*Right Pannel*/
+        .home .right_pannel{
+
+            width: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            animation: popup3 .9s ease;
+
+        }
+
+        .home .right_pannel img{
+
+            border: 3px solid #00Bfff;
+
+            border-radius: 150px 5px 150px 5px ;
+
+            box-shadow: 0 0 30px #00BFFF;
+
+            background: linear-gradient(180deg, #061321, #0B1D33);
+
+        }
+
+        .home .right_pannel i{
+
+            display: block;
+
+            position: absolute;
+
+            right: 110px;
+
+            bottom: 90px;
+
+            font-size: 2em;
+
+            color: aqua;
+
+            border-radius: 50px;
+
+            padding: 15px;
+
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        .home .right_pannel .dot1,.dot2,.dot3,.dot4{
+
+            position: absolute;
+
+            background-color: #007bff;
+
+            border: 1px solid #007bff;
+
+            border-radius: 50px;
+
+            box-shadow: 0 0 30px #00BFFF;
+
+        }
+
+        .home .right_pannel .dot1{
+
+            padding: 10px;
+
+            top: 180px;
+
+            right: 500px;
+
+            animation: profile 3.5s ease-in-out infinite;
+
+        }
+
+        .home .right_pannel .dot2{
+
+            padding: 7px;
+
+            top: 130px;
+
+            right: 100px;
+
+            animation: profile 4s ease-in-out infinite;
+
+        }
+
+        .home .right_pannel .dot3{
+
+            padding: 5px;
+
+            bottom: 150px;
+
+            right: 600px;
+
+            animation: profile 3s ease-in-out infinite;
+
+        }
+
+        .home .right_pannel .dot4{
+
+            padding: 9px;
+
+            bottom: 65px;
+
+            right: 270px;
+
+            animation: profile 2.5s ease-in-out infinite;
+
+        }
+
+        /*//// About ////*/
+
+        .about{
+
+            display: flex;
+
+            background-color: #0B1D33;
+
+            border: 1px solid #007bff;
+
+            border-radius: 25px;
+
+            padding: 30px;
+
+            height: 280px;
+
+            overflow: hidden;
+
+        }
+
+        /* Left Pannel 2 */
+        .about .left_pannel2{
+
+            display: flex;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .about .left_pannel2 button{
+
+            background-color: #061321;
+
+            color: #00BFFF;
+
+            border: 1px solid #007bff;
+
+            border-radius: 10px;
+
+            padding: 15px;
+
+            transition: .4s;
+
+        }
+
+        .about .left_pannel2 button:hover{
+
+            background-color: #007bff;
+
+            color: #ffffff;
+
+            transform: translateY(-3px);
+            transition: .4s;
+
+        }
+
+        .about .left_pannel2 button:active{
+
+            transform: scale(.97);
+            transition: .4s;
+
+        }
+
+        /* Right pannel 2 */
+        .about .right_pannel2{
+
+            display: block;
+
+            border-left: .5px solid #00BFFF;
+
+            padding-left: 25px;
+
+        }
+
+        .name,.age,.location,.email{
+
+            display: flex;
+
+            align-items: center;
+
+            margin-right: 60px;
+
+            border-bottom: 1px solid #193455;
+
+        }
+
+        .name i,.age i,.location i,.email i{
+
+            margin-right: 20px;
+
+        }
+
+        .name2 span,.age2 span,.location2 span,.email2 span{
+
+            color: #00BFFF;
+
+        }
+
+        .name2 p,.age2 p,.location2 p,.email2 p{
+
+            margin-top: 10px;
+
+            color: #ffffff;
+
+        }
+
+        /*//// Skills ////*/
+        .skills{
+
+            margin: 90px 0px;
+
+            padding: 20px;
+
+            overflow-x: auto;
+
+        }
+
+        .skills .lists {
+
+            display: flex;
+
+        }
+
+        .skills .lists span{
+
+            background-color: #193455;
+
+            color: #ffffff;
+
+            margin: 10px;
+
+            padding: 20px;
+
+            width: 150px;
+
+            border: 0.1px solid #ffffff;
+
+            border-radius: 15px;
+
+            font-size: 1.3em;
+        }
+
+        .skills .lists span i{
+
+            font-size: 3em;
+        }
+
+
+        /*===== Light,Dark Mode =====*/
+
+        body.light{
+
+            background:#edf2f8;
+
+            color:#222;
+
+        }
+
+        body.light .taskbar .l_d_cv .theme .theme_Btn1 i,
+        body.light .taskbar .l_d_cv .theme .theme_Btn1{
+
+            color: #00BFFF;
+
+            border-bottom: 2px solid #007bff;
+
+            transition: .4s;
+
+        }
+
+        body.light .taskbar .l_d_cv .theme .theme_Btn2 i,
+        body.light .taskbar .l_d_cv .theme .theme_Btn2{
+
+            color: #ffffff;
+
+            border: none;
+
+            transition: .4s;
+
+        }
+       
+
+
+        /*===== Popup =====*/
+
+        @keyframes popup1{
+
+            from{
+
+                opacity:0;
+
+                transform:translateY(-15px);
+
+            }
+
+            to{
+
+                opacity:1;
+
+                transform:translateY(0);
+
+            }
+
+        }
+
+        @keyframes popup2{
+
+            from{
+
+                opacity: 0;
+
+                transform: translateX(-10px);
+
+            }
+
+            to{
+
+                opacity: 1;
+
+                transform: translateX(0);
+
+            }
+        }
+
+        @keyframes popup3{
+
+            from{
+
+                opacity: 0;
+
+                transform: translateY(15px);
+
+            }
+
+            to{
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+        }
+
+        @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+        }
+
+        @keyframes profile{
+
+            0%,100%{
+                transform:translateY(0);
+            }
+
+            50%{
+                transform:translateY(12px);
+            }
+
+        }
+        
+        .left_pannel h4 .cursor,
+        .left_pannel2 .cursor2{
+            animation: blink 0.7s infinite;
+        }
+
+        /*===== Mouse Move =====*/
+
+        .cursor-glow{
+
+            position:fixed;
+
+            width:250px;
+            height:250px;
+
+            border-radius:50%;
+
+            background:radial-gradient(
+                rgba(91, 192, 225, 0.18),
+                transparent 70%
+            );
+
+            pointer-events:none;
+
+            transform:translate(-50%,-50%);
+
+            filter:blur(40px);
+
+            z-index:-1;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--Main-->
+    <div class="main">
+        
+        <!-- Task Bar -->
+        <div class="taskbar">
+
+            <h1>Hello .......</h1>
+
+            <div class="menu">
+
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <div class="l_d_cv">
+
+                <div class="theme">
+                    <button id="themeBtn1" class="theme_Btn1"><i class="fa-solid fa-sun"></i></button>
+                    <button id="themeBtn2" class="theme_Btn2"><i class="fa-solid fa-moon"></i></button>
+                </div>
+
+                <a href="#">Download CV</a>
+
+            </div>
+
+        </div>
+
+        <!-- home -->
+        <div class="home">
+
+            <!-- Left -->
+            <div class="left_pannel">
+
+                <h1>Ko Moe <span>Htet</span></h1>
+
+                <span style="color: #ffffff;">My Level</span>
+                <h4 style="font-size: 1.5em; margin-top: 0;">
+                    <span id="text_style"></span>
+                    <span class="cursor">|</span>
+                </h4>
+
+                <p>"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
+
+                <button>Contact Me <i class="fa-solid fa-paper-plane"></i></button>
+
+                <div class="left_pannel_menu">
+
+                    <a href="https://github.com/MoeHtet9"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.t.me/MoeHtetr"><i class="fa-brands fa-telegram" style="color: #007bff; background-color: #ffffff; border-radius: 50px;"></i></a>
+                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT"><i class="fa-brands fa-tiktok" style="color: red;"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+            <div class="right_pannel">
+
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+                <div class="dot3"></div>
+                <div class="dot4"></div>
+
+                <img src="img1.jpg" alt="error" style="width: 370px;height: 340px;">
+                <i class="fa-solid fa-code"></i>
+
+            </div>
+
+        </div>
+
+        <!-- About -->
+        <div class="about" id="about">
+
+            <div class="left_pannel2">
+
+                <img src="img2.jpg" alt="error" style="height: 90%;width: 45%; margin-right: 25px; border-radius: 25px; box-shadow: 0px 0px 10px #007bff;">
+
+                <div>
+                    
+                    <label style="color: #007bff;">ABOUT ME</label>
+
+                    <h1 style="color: #ffffff;">About Me</h1>
+
+                    <p style="color: #ffffff; width: 400px;">
+                        <span>
+                            Code. Learn. Build. Repeat.<br>
+                            Hello, I'm Moe Htet, an aspiring Full Stack Developer.
+                            I believe real growth comes from consistent practice and building projects, not just finishing tutorials.
+                            Every challenge is an opportunity to improve, and every project brings me one step closer to my goal.
+                        </span>
+                        <span class="cursor2">|</span>
+                    </p>
+
+                    <button>Let's Talk <i class="fa-solid fa-comment"></i></button>
+
+                </div>
+
+            </div>
+
+            <div class="right_pannel2">
+
+                <div class="name">
+                    <i class="fa-solid fa-user" style="color: #007bff; font-size: 1.5em;"></i>
+                    <div class="name2">
+                        <span>Name</span>
+                        <p>Ko Moe Htet</p>
+                    </div>
+                </div>
+                
+                <div class="age">
+                    <i class="fa-solid fa-thin fa-calendar" style="color: #007bff; font-size: 1.5em;"></i>
+                    <div class="age2">
+                        <span>Age</span>
+                        <p>18</p>
+                    </div>
+                </div>
+                
+                <div class="location">
+                    <i class= "fa-solid fa-location-dot" style="color: #007bff; font-size: 1.5em;"></i>
+                    <div class="location2">
+                        <span>Location</span>
+                        <p>Yangon, Myanmar</p>
+                    </div>
+                </div>
+                
+                <div class="email">
+                    <i class="fa-regular fa-envelope" style="color: #007bff; font-size: 1.5em;"></i>
+                    <div class="email2">
+                        <span>Email</span>
+                        <p>moehtet17112024@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Skills -->
+
+        <div class="skills" id="skills">
+
+            <h2 style="color: #00BFFF;">My Skills</h2>
+
+            <div class="lists">
+
+                <span>
+                    <i class="fa-brands fa-html5" style="color: orangered; background-color: #ffffff;"></i>
+                    <p>HTML   95%</p>
+                </span>
+
+                <span>
+                    <i class="fa-brands fa-css3-alt" style="color: #007bff; background-color: #ffffff;"></i>
+                    <p>CSS   88%</p>
+                </span>
+
+                <span>
+                    <i class="fa-brands fa-js" style="color: yellow;"></i>
+                    <P>JavaScript   30%</P>
+                </span>
+
+                <span>
+                    <i class="fa-brands fa-python" style="color: yellowgreen;"></i>
+                    <p>Tg bot.py   10%</p>
+                </span>
+
+            </div>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script>
+
+        // Light , Dark Mode //
+
+        const themeBtn1 = document.getElementById("themeBtn1");
+        const themeBtn2 = document.getElementById("themeBtn2");
+
+        let theme = localStorage.getItem("theme");
+
+        if(theme === "light"){
+
+            document.body.classList.add("light");
+
+        }else{
+
+            document.body.classList.remove("light");
+
+        };
+
+        themeBtn1.addEventListener("click", ()=>{
+
+            document.body.classList.add("light");
+
+            localStorage.setItem("theme" , "light");
+
+        });
+
+        themeBtn2.addEventListener("click", ()=>{
+
+            document.body.classList.remove("light");
+
+            localStorage.setItem("theme" , "dark");
+
+        });
+
+        // Text Style //
+
+        const text = "Frontend Developer";
+        const typing = document.getElementById("text_style");
+
+        let index = 0;
+
+        function typeEffect() {
+        if (index < text.length) {
+            typing.textContent += text[index];
+            index++;
+
+            setTimeout(typeEffect, 200);
+        };
+        };
+
+        typeEffect();
+
+        // Mouse Move //
+
+        const glow = document.createElement("div");
+
+        glow.className = "cursor-glow";
+
+        document.body.appendChild(glow);
+
+        document.addEventListener("mousemove", (e) => {
+
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+
+        });
+
+    </script>
+</body>
+</html>
