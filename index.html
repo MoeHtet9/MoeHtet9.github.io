@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
 
         /*////body////*/
@@ -21,7 +22,7 @@
         /*////Task Bar////*/
         .taskbar{
 
-            background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(15,23,42,0.72), rgba(15,23,42,0.95));
+            background: linear-gradient(180deg, rgba(28, 48, 96, 0.95), rgba(15,23,42,0.72), rgba(72, 78, 93, 0.95));
 
             backdrop-filter: blur(10px);
 
@@ -712,7 +713,7 @@
 
                 <p>"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
 
-                <button><a href="#contact" class="a">Contact Me <i class="fa-solid fa-paper-plane"></i></a></button>
+                <button class="a"><a href="#contact" class="a" style="background: none; border: none;">Contact Me <i class="fa-solid fa-paper-plane"></i></a></button>
 
                 <div class="left_pannel_menu">
 
@@ -807,7 +808,7 @@
         </div>
 
         <!-- Download CV -->
-        <div class="download-cv p" id="download-cv" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+        <div class="download-cv p" id="download-cv" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-right">
 
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Download CV</h2>
 
@@ -832,29 +833,29 @@
 
             <div class="lists">
 
-                <span>
+                <span data-aos="zoom-in-right">
                     <i class="fa-brands fa-html5" style="color: orangered; background-color: transparent;"></i>
                     <p>HTML   95%</p>
                 </span>
 
-                <span>
+                <span data-aos="zoom-in-right">
                     <i class="fa-brands fa-css3-alt" style="color: #7dd3fc; background-color: transparent;"></i>
                     <p>CSS   88%</p>
                 </span>
 
-                <span>
+                <span data-aos="zoom-in-right">
                     <i class="fa-brands fa-js" style="color: #facc15;"></i>
                     <p>JavaScript   30%</p>
                 </span>
 
-                <span>
+                <span data-aos="zoom-in-left">
                     <i class="fa-brands fa-python" style="color: #22c55e;"></i>
                     <p>Tg bot.py   10%</p>
                 </span>
 
-                <span></span>
+                <span data-aos="zoom-in-left"></span>
 
-                <span></span>
+                <span data-aos="zoom-in-left"></span>
 
                 <span></span>
 
@@ -865,7 +866,7 @@
         </div>
 
         <!-- Projects -->
-        <div class="projects p" id="projects" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+        <div class="projects p" id="projects" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-up">
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Projects</h2>
             <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">Here are a few of my recent projects. I build responsive, modern web interfaces and useful developer tools focused on clarity and performance.</p>
             <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
@@ -876,7 +877,7 @@
         </div>
 
         <!-- Experience -->
-        <div class="experience p" id="experience" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+        <div class="experience p" id="experience" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="zoom-out">
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Experience</h2>
             <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">I have been learning and building projects with HTML, CSS, JavaScript, and Python. I focus on creating clear code and improving my skills every day.</p>
             <div style="display: grid; gap: 14px; margin-top: 20px;">
@@ -892,14 +893,18 @@
         </div>
 
         <!-- Contact -->
-        <div class="contact p" id="contact" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px; margin-bottom: 40px;">
+        <div class="contact p" id="contact" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px; margin-bottom: 40px;" data-aos="fade-down">
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Contact</h2>
             <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">If you'd like to work together, feel free to reach out. I'm open to collaboration, internships, and freelance work.</p>
             <p style="color: #94a3b8; margin-top: 18px;">Email: <a href="mailto:moehtet17112024@gmail.com" style="color: #7dd3fc; text-decoration: none;">moehtet17112024@gmail.com</a></p>
         </div>
+
     </div>
-    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+
+        AOS.init();
 
         // Text Style //
 
@@ -959,5 +964,6 @@
         });
 
     </script>
+
 </body>
 </html>
