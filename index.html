@@ -12,7 +12,7 @@
 
             min-height: 100vh;
 
-            background: linear-gradient(180deg, #061321, #0B1D33);
+            background: linear-gradient(180deg, #0f172a, #0b1220, #12273b, #0b1220, #0f172a);
 
             padding: 25px;
 
@@ -21,9 +21,11 @@
         /*////Task Bar////*/
         .taskbar{
 
-            background-color: rgba(51, 198, 247, 0.1);
+            background: linear-gradient(180deg, rgba(15,23,42,0.95), rgba(15,23,42,0.72), rgba(15,23,42,0.95));
 
             backdrop-filter: blur(10px);
+
+            z-index: 100;
 
             display: flex;
 
@@ -49,7 +51,7 @@
 
             font-size: 1.5em;
 
-            color: white;
+            color: #ffffff;
 
             margin: 0;
 
@@ -71,7 +73,7 @@
 
             margin-left: 25px;
 
-            color: #ffffff;
+            color: #cbd5e1;
 
             transition: .4s;
 
@@ -79,7 +81,7 @@
 
         .taskbar .menu a:hover{
 
-            border-bottom: 2px dotted #00BFFF;
+            border-bottom: 2px dotted #7dd3fc;
 
             transform: translateY(-2px);
             transition: .4s;
@@ -88,7 +90,7 @@
 
         .taskbar .menu a:active{
 
-            color: #00BFFF;
+            color: #7dd3fc;
 
             transform: scale(.95);
         }
@@ -103,73 +105,15 @@
 
         }
 
-        .taskbar .l_d_cv .theme{
-
-            display: flex;
-
-            width: 70px;
-
-            height: 35px;
-
-            margin-right: 10px;
-
-            border: .4px solid #00BFFF;
-
-            border-radius: 50px;
-
-            align-items: center;
-
-            overflow: hidden;
-
-            transition: .3s;
-
-        }
-
-        .taskbar .l_d_cv .theme button{
-
-            background: none;
-
-            border: none;
-
-            cursor: pointer;
-
-            padding: 12px;
-
-        }
-
-        .taskbar .l_d_cv .theme button:hover{
-
-            background-color: rgba(242, 236, 236, 0.1);
-        }
-
-        .taskbar .l_d_cv .theme .theme_Btn1 i{
-
-            color: #ffffff;
-
-            transition: .4s;
-
-        }
-
-        .taskbar .l_d_cv .theme .theme_Btn2 i,
-        .taskbar .l_d_cv .theme .theme_Btn2{
-
-            color: #00BFFF;
-
-            border-bottom: 2px solid #007bff;
-
-            transition: .4s;
-
-        }
-
         .taskbar .l_d_cv a{
 
             text-decoration: none;
 
-            background-color: #00BFFF;
+            background-color: #1e293b;
 
-            color: #ffffff;
+            color: #e2e8f0;
 
-            border: .4px solid #061321;
+            border: .4px solid rgba(125,211,252,.45);
 
             border-radius: 10px;
 
@@ -179,9 +123,13 @@
 
         }
 
-        .taskbar .l_d_cv a:hover{
+        .taskbar .l_d_cv a{
 
-            color: #061321;
+            background: linear-gradient(180deg, #1e293b, #0f172a, #1e293b);
+
+        }
+
+        .taskbar .l_d_cv a:hover{
 
             transform: translateY(-3px);
             transition: .3s;
@@ -230,7 +178,7 @@
 
         .home .left_pannel h1{
 
-            color: #ffffff;
+            color: #f8fafc;
 
             font-size: 3em;
 
@@ -239,17 +187,19 @@
         .home .left_pannel h1 span,
         .home .left_pannel h4{
 
-            color: #00BFFF;
+            color: #7dd3fc;
 
         }
 
-        .home .left_pannel button{
+        .home .left_pannel .a{
 
-            background-color: #061321;
+            background: linear-gradient(180deg, #2563eb, #0f172a);
 
             color: #ffffff;
 
-            border: 0.3px solid #00BFFF;
+            text-decoration: none;
+
+            border: 0.3px solid rgba(125,211,252,.5);
 
             border-radius: 5px;
 
@@ -261,11 +211,9 @@
 
         .home .left_pannel button:hover{
 
-            background-color: #007bff;
+            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
 
-            color: #ffffff;
-
-            transform: translateY(-3px);
+            transform: translateY(-4px);
             transition: .3s;
 
         }
@@ -287,7 +235,7 @@
 
         .left_pannel .left_pannel_menu a{
 
-            border: 1px solid #00BFFF;
+            border: 1px solid rgba(125,211,252,.6);
 
             border-radius: 50px;
 
@@ -295,9 +243,9 @@
 
             margin-right: 25px;
 
-            background-color: #061321;
+            background: linear-gradient(180deg, #1e293b, #111827);
 
-            color: #ffffff;
+            color: #e2e8f0;
 
             transition: .3s;
 
@@ -336,13 +284,13 @@
 
         .home .right_pannel img{
 
-            border: 3px solid #00Bfff;
+            border: 3px solid rgba(125,211,252,.65);
 
             border-radius: 150px 5px 150px 5px ;
 
-            box-shadow: 0 0 30px #00BFFF;
+            box-shadow: 0 0 30px rgba(125,211,252,.25);
 
-            background: linear-gradient(180deg, #061321, #0B1D33);
+            background: linear-gradient(180deg, #0b1220, #111827);
 
         }
 
@@ -358,7 +306,7 @@
 
             font-size: 2em;
 
-            color: aqua;
+            color: #7dd3fc;
 
             border-radius: 50px;
 
@@ -371,13 +319,13 @@
 
             position: absolute;
 
-            background-color: #007bff;
+            background-color: #7dd3fc;
 
-            border: 1px solid #007bff;
+            border: 1px solid rgba(125,211,252,.8);
 
             border-radius: 50px;
 
-            box-shadow: 0 0 30px #00BFFF;
+            box-shadow: 0 0 30px rgba(125,211,252,.2);
 
         }
 
@@ -433,15 +381,23 @@
 
         .about{
 
+            opacity: 0;
+
+            transform: translateY(80px);
+
+            transition: all 1s ease;
+
             display: flex;
 
-            background-color: #0B1D33;
+            background-color: #111827;
 
-            border: 1px solid #007bff;
+            border: 1px solid rgba(125,211,252,.2);
 
             border-radius: 25px;
 
             padding: 30px;
+
+            margin-top: 80px;
 
             height: 280px;
 
@@ -464,11 +420,11 @@
 
         .about .left_pannel2 button{
 
-            background-color: #061321;
+            background-color: #0f172a;
 
-            color: #00BFFF;
+            color: #7dd3fc;
 
-            border: 1px solid #007bff;
+            border: 1px solid rgba(125,211,252,.35);
 
             border-radius: 10px;
 
@@ -480,7 +436,7 @@
 
         .about .left_pannel2 button:hover{
 
-            background-color: #007bff;
+            background-color: #2563eb;
 
             color: #ffffff;
 
@@ -501,7 +457,7 @@
 
             display: block;
 
-            border-left: .5px solid #00BFFF;
+            border-left: .5px solid rgba(125,211,252,.5);
 
             padding-left: 25px;
 
@@ -527,7 +483,7 @@
 
         .name2 span,.age2 span,.location2 span,.email2 span{
 
-            color: #00BFFF;
+            color: #7dd3fc;
 
         }
 
@@ -546,21 +502,33 @@
 
             padding: 20px;
 
-            overflow-x: auto;
+            opacity: 0;
+
+            transform: translateY(80px);
+
+            transition: all 1s ease;
+
+            overflow: hidden;
 
         }
 
         .skills .lists {
 
-            display: flex;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+
+            overflow-X: scroll;
+
+            scrollbar-color: #0000 #0000;
 
         }
 
         .skills .lists span{
 
-            background-color: #193455;
+            background-color: #1f2937;
 
-            color: #ffffff;
+            color: #e2e8f0;
 
             margin: 10px;
 
@@ -568,51 +536,18 @@
 
             width: 150px;
 
-            border: 0.1px solid #ffffff;
+            border: 0.1px solid rgba(226,232,240,.18);
 
             border-radius: 15px;
 
             font-size: 1.3em;
+
         }
 
         .skills .lists span i{
 
             font-size: 3em;
         }
-
-
-        /*===== Light,Dark Mode =====*/
-
-        body.light{
-
-            background:#edf2f8;
-
-            color:#222;
-
-        }
-
-        body.light .taskbar .l_d_cv .theme .theme_Btn1 i,
-        body.light .taskbar .l_d_cv .theme .theme_Btn1{
-
-            color: #00BFFF;
-
-            border-bottom: 2px solid #007bff;
-
-            transition: .4s;
-
-        }
-
-        body.light .taskbar .l_d_cv .theme .theme_Btn2 i,
-        body.light .taskbar .l_d_cv .theme .theme_Btn2{
-
-            color: #ffffff;
-
-            border: none;
-
-            transition: .4s;
-
-        }
-       
 
 
         /*===== Popup =====*/
@@ -724,6 +659,12 @@
 
         }
 
+        /*===== PAGE STYLE =====*/
+        .show{
+            opacity:1;
+            transform:translateY(0);
+        }
+
     </style>
 </head>
 <body>
@@ -738,7 +679,7 @@
 
             <div class="menu">
 
-                <a href="#">Home</a>
+                <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
@@ -749,24 +690,19 @@
 
             <div class="l_d_cv">
 
-                <div class="theme">
-                    <button id="themeBtn1" class="theme_Btn1"><i class="fa-solid fa-sun"></i></button>
-                    <button id="themeBtn2" class="theme_Btn2"><i class="fa-solid fa-moon"></i></button>
-                </div>
-
-                <a href="#">Download CV</a>
+                <a href="MoeHtet_CV.txt" download="MoeHtet_CV.txt">Download CV</a>
 
             </div>
 
         </div>
 
         <!-- home -->
-        <div class="home">
+        <div class="home" id="home">
 
             <!-- Left -->
             <div class="left_pannel">
 
-                <h1>Ko Moe <span>Htet</span></h1>
+                <h1> Ko Moe <span> Htet </span> </h1>
 
                 <span style="color: #ffffff;">My Level</span>
                 <h4 style="font-size: 1.5em; margin-top: 0;">
@@ -776,13 +712,13 @@
 
                 <p>"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
 
-                <button>Contact Me <i class="fa-solid fa-paper-plane"></i></button>
+                <button><a href="#contact" class="a">Contact Me <i class="fa-solid fa-paper-plane"></i></a></button>
 
                 <div class="left_pannel_menu">
 
-                    <a href="https://github.com/MoeHtet9"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.t.me/MoeHtetr"><i class="fa-brands fa-telegram" style="color: #007bff; background-color: #ffffff; border-radius: 50px;"></i></a>
-                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT"><i class="fa-brands fa-tiktok" style="color: red;"></i></a>
+                    <a href="https://github.com/MoeHtet9"><i class="fa-brands fa-github" style="font-size: 1.5em; background-color: #000; border-radius: 50px; padding: 2px;"></i></a>
+                    <a href="https://www.t.me/MoeHtetr"><i class="fa-brands fa-telegram" style="color: #7dd3fc; background-color: #0f172a; border-radius: 50px; font-size: 1.7em;"></i></a>
+                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT"><i class="fa-brands fa-tiktok" style="background-color: #111827; padding: 3px; border-radius: 60px; font-size: 1.3em; color: #cbd5e1;"></i></a>
 
                 </div>
 
@@ -804,15 +740,15 @@
         </div>
 
         <!-- About -->
-        <div class="about" id="about">
+        <div class="about p" id="about">
 
             <div class="left_pannel2">
 
-                <img src="img2.jpg" alt="error" style="height: 90%;width: 45%; margin-right: 25px; border-radius: 25px; box-shadow: 0px 0px 10px #007bff;">
+                <img src="img2.jpg" alt="error" style="height: 90%;width: 45%; margin-right: 25px; border-radius: 25px; box-shadow: 0px 0px 10px rgba(125,211,252,.35);">
 
                 <div>
                     
-                    <label style="color: #007bff;">ABOUT ME</label>
+                    <label style="color: #7dd3fc;">ABOUT ME</label>
 
                     <h1 style="color: #ffffff;">About Me</h1>
 
@@ -835,7 +771,7 @@
             <div class="right_pannel2">
 
                 <div class="name">
-                    <i class="fa-solid fa-user" style="color: #007bff; font-size: 1.5em;"></i>
+                    <i class="fa-solid fa-user" style="color: #7dd3fc; font-size: 1.5em;"></i>
                     <div class="name2">
                         <span>Name</span>
                         <p>Ko Moe Htet</p>
@@ -843,7 +779,7 @@
                 </div>
                 
                 <div class="age">
-                    <i class="fa-solid fa-thin fa-calendar" style="color: #007bff; font-size: 1.5em;"></i>
+                    <i class="fa-solid fa-thin fa-calendar" style="color: #7dd3fc; font-size: 1.5em;"></i>
                     <div class="age2">
                         <span>Age</span>
                         <p>18</p>
@@ -851,7 +787,7 @@
                 </div>
                 
                 <div class="location">
-                    <i class= "fa-solid fa-location-dot" style="color: #007bff; font-size: 1.5em;"></i>
+                    <i class= "fa-solid fa-location-dot" style="color: #7dd3fc; font-size: 1.5em;"></i>
                     <div class="location2">
                         <span>Location</span>
                         <p>Yangon, Myanmar</p>
@@ -859,7 +795,7 @@
                 </div>
                 
                 <div class="email">
-                    <i class="fa-regular fa-envelope" style="color: #007bff; font-size: 1.5em;"></i>
+                    <i class="fa-regular fa-envelope" style="color: #7dd3fc; font-size: 1.5em;"></i>
                     <div class="email2">
                         <span>Email</span>
                         <p>moehtet17112024@gmail.com</p>
@@ -870,74 +806,100 @@
 
         </div>
 
+        <!-- Download CV -->
+        <div class="download-cv p" id="download-cv" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+
+            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Download CV</h2>
+
+            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">
+                Hello, I'm <strong>Ko Moe Htet</strong>. I create clean web experiences and simple automation tools while learning every day.
+            </p>
+
+            <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 12px;">• HTML / CSS responsive development with polished layout work.</li>
+                <li style="margin-bottom: 12px;">• JavaScript interaction and Python-powered Telegram bots.</li>
+                <li style="margin-bottom: 12px;">• Portfolio websites, automation scripts, and developer tools.</li>
+            </ul>
+
+            <a href="MoeHtet_CV.txt" download="MoeHtet_CV.txt" class="a" style="display: inline-block; margin-top: 20px;">Download Full CV</a>
+
+        </div>
+
         <!-- Skills -->
+        <div class="skills p" id="skills">
 
-        <div class="skills" id="skills">
-
-            <h2 style="color: #00BFFF;">My Skills</h2>
+            <h2 style="color: #7dd3fc;">My Skills</h2>
 
             <div class="lists">
 
                 <span>
-                    <i class="fa-brands fa-html5" style="color: orangered; background-color: #ffffff;"></i>
+                    <i class="fa-brands fa-html5" style="color: orangered; background-color: transparent;"></i>
                     <p>HTML   95%</p>
                 </span>
 
                 <span>
-                    <i class="fa-brands fa-css3-alt" style="color: #007bff; background-color: #ffffff;"></i>
+                    <i class="fa-brands fa-css3-alt" style="color: #7dd3fc; background-color: transparent;"></i>
                     <p>CSS   88%</p>
                 </span>
 
                 <span>
-                    <i class="fa-brands fa-js" style="color: yellow;"></i>
-                    <P>JavaScript   30%</P>
+                    <i class="fa-brands fa-js" style="color: #facc15;"></i>
+                    <p>JavaScript   30%</p>
                 </span>
 
                 <span>
-                    <i class="fa-brands fa-python" style="color: yellowgreen;"></i>
+                    <i class="fa-brands fa-python" style="color: #22c55e;"></i>
                     <p>Tg bot.py   10%</p>
                 </span>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
 
             </div>
 
         </div>
-        
+
+        <!-- Projects -->
+        <div class="projects p" id="projects" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Projects</h2>
+            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">Here are a few of my recent projects. I build responsive, modern web interfaces and useful developer tools focused on clarity and performance.</p>
+            <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 12px;">• Portfolio website with smooth animations and mobile-first layout.</li>
+                <li style="margin-bottom: 12px;">• Telegram bot for notifications and quick task reminders.</li>
+                <li style="margin-bottom: 12px;">• JavaScript utility scripts for automation and data handling.</li>
+            </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="experience p" id="experience" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;">
+            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Experience</h2>
+            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">I have been learning and building projects with HTML, CSS, JavaScript, and Python. I focus on creating clear code and improving my skills every day.</p>
+            <div style="display: grid; gap: 14px; margin-top: 20px;">
+                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
+                    <strong style="color: #e2e8f0;">Frontend development</strong>
+                    <p style="color: #94a3b8; margin: 8px 0 0;">Built user interfaces with responsive layouts and interactive elements.</p>
+                </div>
+                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
+                    <strong style="color: #e2e8f0;">Telegram bot scripting</strong>
+                    <p style="color: #94a3b8; margin: 8px 0 0;">Created Python bots to automate chat tasks and deliver notifications.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="contact p" id="contact" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px; margin-bottom: 40px;">
+            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Contact</h2>
+            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">If you'd like to work together, feel free to reach out. I'm open to collaboration, internships, and freelance work.</p>
+            <p style="color: #94a3b8; margin-top: 18px;">Email: <a href="mailto:moehtet17112024@gmail.com" style="color: #7dd3fc; text-decoration: none;">moehtet17112024@gmail.com</a></p>
+        </div>
     </div>
     <script src="script.js"></script>
     <script>
-
-        // Light , Dark Mode //
-
-        const themeBtn1 = document.getElementById("themeBtn1");
-        const themeBtn2 = document.getElementById("themeBtn2");
-
-        let theme = localStorage.getItem("theme");
-
-        if(theme === "light"){
-
-            document.body.classList.add("light");
-
-        }else{
-
-            document.body.classList.remove("light");
-
-        };
-
-        themeBtn1.addEventListener("click", ()=>{
-
-            document.body.classList.add("light");
-
-            localStorage.setItem("theme" , "light");
-
-        });
-
-        themeBtn2.addEventListener("click", ()=>{
-
-            document.body.classList.remove("light");
-
-            localStorage.setItem("theme" , "dark");
-
-        });
 
         // Text Style //
 
@@ -969,6 +931,30 @@
 
             glow.style.left = e.clientX + "px";
             glow.style.top = e.clientY + "px";
+
+        });
+
+        // PAGE ANIMATION //
+
+        const hiddenElements = document.querySelectorAll(".p");
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+        hiddenElements.forEach((element) => {
+
+            observer.observe(element);
 
         });
 

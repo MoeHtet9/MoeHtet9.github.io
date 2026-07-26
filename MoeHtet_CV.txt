@@ -1,0 +1,28 @@
+Name: Ko Moe Htet
+Age: 18
+Location: Yangon, Myanmar
+Email: moehtet17112024@gmail.com
+
+Career Objective:
+Aspiring Full Stack Developer building modern, responsive web interfaces and practical tools. I learn by doing and focus on delivering clear, maintainable code.
+
+Skills:
+- HTML: 95%
+- CSS: 88%
+- JavaScript: 30%
+- Python (Telegram bots): 10%
+
+Experience:
+- Frontend development with responsive layouts and polished UI.
+- Telegram bot scripting and automation with Python.
+- Building portfolio websites and small development tools.
+
+Projects:
+- Personal portfolio website with animations and mobile-first design.
+- Telegram bot for notifications and task reminders.
+- JavaScript utility scripts for automation and data handling.
+
+Contact:
+Email: moehtet17112024@gmail.com
+GitHub: https://github.com/MoeHtet9
+Telegram: https://www.t.me/MoeHtetr
