@@ -666,6 +666,147 @@
             transform:translateY(0);
         }
 
+        /*==============================
+        MOBILE (360px-768px)
+        ===============================*/
+
+        @media (max-width:768px){
+
+            body{
+                padding:10px;
+            }
+
+            .taskbar{
+                padding:15px;
+            }
+
+            .taskbar .menu{
+                display:none;
+            }
+
+            .taskbar h1{
+                font-size:1.2rem;
+            }
+
+            .taskbar .l_d_cv a{
+                font-size:.8rem;
+                padding:8px 10px;
+            }
+
+            /* Home */
+
+            .home{
+                display:flex;
+                flex-direction:column-reverse;
+                text-align:center;
+                gap:40px;
+                margin-top:90px;
+            }
+
+            .home .left_pannel,
+            .home .right_pannel{
+                width:100%;
+                padding:0;
+            }
+
+            .home .left_pannel h1{
+                font-size:2.3rem;
+            }
+
+            .home .left_pannel h4{
+                font-size:1.2rem !important;
+            }
+
+            .home .left_pannel p{
+                font-size:1rem;
+                line-height:1.8;
+            }
+
+            .home .right_pannel img{
+                width:270px !important;
+                height:270px !important;
+            }
+
+            .right_pannel i{
+                right:35px;
+                bottom:30px;
+            }
+
+            .dot1,
+            .dot2,
+            .dot3,
+            .dot4{
+                display:none;
+            }
+
+            .left_pannel .left_pannel_menu{
+                justify-content:center;
+            }
+
+            /* About */
+
+            .about{
+                flex-direction:column;
+                height:auto;
+                padding:20px;
+            }
+
+            .about .left_pannel2{
+                flex-direction:column;
+            }
+
+            .about .left_pannel2 img{
+                display: none;
+                width:100% !important;
+                height:250px !important;
+                margin:0 0 20px 0 !important;
+            }
+
+            .about .left_pannel2 p{
+                width:100% !important;
+            }
+
+            .about .right_pannel2{
+                border-left:none;
+                padding-left:0;
+                margin-top:30px;
+                width:100%;
+            }
+
+            .name,
+            .age,
+            .location,
+            .email{
+                margin-right:0;
+            }
+
+            /* Skills */
+
+            .skills{
+                padding:0;
+            }
+
+            .skills .lists{
+                grid-template-columns:1fr 1fr;
+                gap:15px;
+                overflow:visible;
+            }
+
+            .skills .lists span{
+                width:auto;
+                margin:0;
+            }
+
+            /* Download CV */
+            .download-cv,
+            .projects,
+            .experience,
+            .contact{
+                padding:20px !important;
+            }
+
+        }
+
     </style>
 </head>
 <body>
@@ -763,7 +904,7 @@
                         <span class="cursor2">|</span>
                     </p>
 
-                    <button>Let's Talk <i class="fa-solid fa-comment"></i></button>
+                    <a href="https://www.t.me/MoeHtetr"><button>Let's Talk <i class="fa-solid fa-comment"></i></button></a>
 
                 </div>
 
@@ -857,10 +998,6 @@
 
                 <span data-aos="zoom-in-left"></span>
 
-                <span></span>
-
-                <span></span>
-
             </div>
 
         </div>
@@ -872,7 +1009,6 @@
             <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
                 <li style="margin-bottom: 12px;">• Portfolio website with smooth animations and mobile-first layout.</li>
                 <li style="margin-bottom: 12px;">• Telegram bot for notifications and quick task reminders.</li>
-                <li style="margin-bottom: 12px;">• JavaScript utility scripts for automation and data handling.</li>
             </ul>
         </div>
 
@@ -889,6 +1025,10 @@
                     <strong style="color: #e2e8f0;">Telegram bot scripting</strong>
                     <p style="color: #94a3b8; margin: 8px 0 0;">Created Python bots to automate chat tasks and deliver notifications.</p>
                 </div>
+                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
+                    <strong style="color: #e2e8f0;">I work in a team</strong>
+                    <p style="color: #94a3b8; margin: 8px 0 0;">I was involved in the design department.</p>
+                </div>
             </div>
         </div>
 
@@ -897,6 +1037,8 @@
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Contact</h2>
             <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">If you'd like to work together, feel free to reach out. I'm open to collaboration, internships, and freelance work.</p>
             <p style="color: #94a3b8; margin-top: 18px;">Email: <a href="mailto:moehtet17112024@gmail.com" style="color: #7dd3fc; text-decoration: none;">moehtet17112024@gmail.com</a></p>
+            <p style="color: #94a3b8; margin-top: 18px;">Telegram: <a href="https://www.t.me/MoeHtetr" style="color: #7dd3fc; text-decoration: none;">@MoeHtetr</a></p>
+            <p style="color: #94a3b8; margin-top: 18px;">Phone no: <span style="color: #7dd3fc;">959-792899718</span></p>
         </div>
 
     </div>
@@ -908,7 +1050,7 @@
 
         // Text Style //
 
-        const text = "Frontend Developer";
+        const text = "Junior Frontend Developer";
         const typing = document.getElementById("text_style");
 
         let index = 0;
