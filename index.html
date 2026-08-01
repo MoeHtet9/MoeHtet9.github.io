@@ -17,6 +17,8 @@
 
             padding: 25px;
 
+            overflow-x: hidden;
+
         }
 
         /*////Task Bar////*/
@@ -550,6 +552,74 @@
             font-size: 3em;
         }
 
+        /*//// Projects ////*/
+
+        .projects ul{
+
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: scroll;
+            scrollbar-color: #7dd3fc #1e293b;
+
+        }
+
+        .projects ul li{
+
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            border: 1px solid #1e293b;
+            box-shadow: inset 0 0 10px rgba(125,211,252,.15);
+            padding: 20px;
+            width: 320px;
+            transition: .4s;
+
+        }
+
+        .projects ul li:hover{
+
+            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
+
+            transform: translateY(-3px);
+            transition: .3s;
+
+        }
+
+        .projects ul li a{
+
+            display: flex;
+            color: #7dd3fc;
+            width: 300px;
+            padding: 10px;
+            background: linear-gradient(180deg, #1e293b, #0f172a, #1e293b);
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 15px;    
+            box-shadow: inset 0 0 10px rgba(125,211,252,.15);        
+            margin-top: 10px;
+            transition: .4s;
+
+        }
+
+        .projects ul li a:hover{
+
+            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
+
+            transform: translateY(-3px);
+            transition: .3s;
+
+        }
+
+        .projects ul li a:active{
+
+            transform: scale(.97);
+            transition: .3s;
+
+        }
 
         /*===== Popup =====*/
 
@@ -858,9 +928,9 @@
 
                 <div class="left_pannel_menu">
 
-                    <a href="https://github.com/MoeHtet9"><i class="fa-brands fa-github" style="font-size: 1.5em; background-color: #000; border-radius: 50px; padding: 2px;"></i></a>
-                    <a href="https://www.t.me/MoeHtetr"><i class="fa-brands fa-telegram" style="color: #7dd3fc; background-color: #0f172a; border-radius: 50px; font-size: 1.7em;"></i></a>
-                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT"><i class="fa-brands fa-tiktok" style="background-color: #111827; padding: 3px; border-radius: 60px; font-size: 1.3em; color: #cbd5e1;"></i></a>
+                    <a href="https://github.com/MoeHtet9" target="_blank"><i class="fa-brands fa-github" style="font-size: 1.5em; background-color: #000; border-radius: 50px; padding: 2px;"></i></a>
+                    <a href="https://www.t.me/MoeHtetr" target="_blank"><i class="fa-brands fa-telegram" style="color: #7dd3fc; background-color: #0f172a; border-radius: 50px; font-size: 1.7em;"></i></a>
+                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT" target="_blank"><i class="fa-brands fa-tiktok" style="background-color: #111827; padding: 3px; border-radius: 60px; font-size: 1.3em; color: #cbd5e1;"></i></a>
 
                 </div>
 
@@ -1003,13 +1073,22 @@
         </div>
 
         <!-- Projects -->
-        <div class="projects p" id="projects" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-up">
+        <div class="projects p" id="projects" style="margin-top: 60px; padding: 30px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-up">
+
             <h2 style="color: #7dd3fc; margin-bottom: 20px;">Projects</h2>
-            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">Here are a few of my recent projects. I build responsive, modern web interfaces and useful developer tools focused on clarity and performance.</p>
+
             <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 12px;">• Portfolio website with smooth animations and mobile-first layout.</li>
-                <li style="margin-bottom: 12px;">• Telegram bot for notifications and quick task reminders.</li>
+
+                <li>
+                    <h3>Team Project 1</h3>
+                    <img src="images/pj1.p1.jpg" alt="pj1" style="width: 300px; height: auto;">
+                    <br>
+                    <img src="images/pj1.p2.jpg" alt="pj1" style="width: 300px; height: auto;">
+                    <a href="encrypted-text-sharing-platform-production.up.railway.app" target="blank" style=" text-decoration: none;">open</a>
+                </li>
+
             </ul>
+
         </div>
 
         <!-- Experience -->
