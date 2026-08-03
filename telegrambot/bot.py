@@ -4,12 +4,12 @@ from turtle import update
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 
-TOKEN = "8943736050:AAGdiuEs4XRCA6_H2FkzSxHWdZky7bFxKwM"
+TOKEN = " "
 
 print ("bot running")
 
 # Channel ID
-CHANNEL_ID = -1004490598404
+CHANNEL_ID = -10012345678910
 
 # Save folder
 SAVE_DIR = r"C:\tg_bot_photos"
