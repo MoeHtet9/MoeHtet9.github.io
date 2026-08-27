@@ -3,1188 +3,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="bootstrap.main.css.js/bootstrap.min.css">
+    <script src="bootstrap.main.css.js/bootstrap.bundle.min.js"></script>
+
     <style>
 
-        /*////body////*/
-        body{
-
-            min-height: 100vh;
-
-            background: linear-gradient(180deg, #0f172a, #0b1220, #12273b, #0b1220, #0f172a);
-
-            padding: 25px;
-
-            overflow-x: hidden;
-
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
         }
 
-        /*////Task Bar////*/
-        .taskbar{
-
-            background: linear-gradient(180deg, rgba(28, 48, 96, 0.95), rgba(15,23,42,0.72), rgba(72, 78, 93, 0.95));
-
-            backdrop-filter: blur(10px);
-
-            z-index: 100;
-
-            display: flex;
-
-            position: fixed;
-
-            top: 0;
-
-            right: 0;
-
-            left: 0;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            padding: 10px;
-
-            animation: popup1 .9s ease;
-
-        }
-
-        .taskbar h1{
-
-            font-size: 1.5em;
-
-            color: #ffffff;
-
+        body {
             margin: 0;
-
         }
 
-        .taskbar .menu{
-
-            display: flex;
-
-            justify-content: space-between;
-
+        .section {
+            height: 100vh;
+            scroll-snap-align: start;
         }
 
-        .taskbar .menu a{
-
-            display: flex;
-
-            text-decoration: none;
-
-            margin-left: 25px;
-
-            color: #cbd5e1;
-
-            transition: .4s;
-
-        }
-
-        .taskbar .menu a:hover{
-
-            border-bottom: 2px dotted #7dd3fc;
-
-            transform: translateY(-2px);
-            transition: .4s;
-
-        }
-
-        .taskbar .menu a:active{
-
-            color: #7dd3fc;
-
-            transform: scale(.95);
-        }
-
-        .taskbar .l_d_cv{
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-        }
-
-        .taskbar .l_d_cv a{
-
-            text-decoration: none;
-
-            background-color: #1e293b;
-
-            color: #e2e8f0;
-
-            border: .4px solid rgba(125,211,252,.45);
-
-            border-radius: 10px;
-
-            padding: 10px;
-
-            transition: .3s;
-
-        }
-
-        .taskbar .l_d_cv a{
-
-            background: linear-gradient(180deg, #1e293b, #0f172a, #1e293b);
-
-        }
-
-        .taskbar .l_d_cv a:hover{
-
-            transform: translateY(-3px);
-            transition: .3s;
-
-        }
-
-        .taskbar .l_d_cv a:active{
-
-            transform: scale(.97);
-            transition: .4s;
-
-        }
-
-        /*////Home////*/
-        .home{
-
-            padding: 20px;
-
-            display: flex;
-
-            grid-template-columns: 1fr 1fr;
-
-            min-height: 80vh;
-
-            margin-top: 40px;
-
-        }
-
-        /*Left Pannel*/
-        .home .left_pannel{
-
-            width: 50%;
-
-            padding: 20px;
-
-            animation: popup2 1s ease;
-
-        }
-
-        .home .left_pannel p{
-
-            color: #ffffff;
-
-            font-size: 1.5em;
-        }
-
-        .home .left_pannel h1{
-
-            color: #f8fafc;
-
-            font-size: 3em;
-
-        }
-
-        .home .left_pannel h1 span,
-        .home .left_pannel h4{
-
-            color: #7dd3fc;
-
-        }
-
-        .home .left_pannel .a{
-
-            background: linear-gradient(180deg, #2563eb, #0f172a);
-
-            color: #ffffff;
-
-            text-decoration: none;
-
-            border: 0.3px solid rgba(125,211,252,.5);
-
-            border-radius: 5px;
-
-            padding: 10px;
-
-            transition: .3s;
-
-        }
-
-        .home .left_pannel button:hover{
-
-            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
-
-            transform: translateY(-4px);
-            transition: .3s;
-
-        }
-
-        .home .left_pannel button:active{
-
-            transform: scale(.97);
-            transition: .3s;
-
-        }
-
-        .left_pannel .left_pannel_menu{
-
-            display: flex;
-
-            margin-top: 20px;
-
-        }
-
-        .left_pannel .left_pannel_menu a{
-
-            border: 1px solid rgba(125,211,252,.6);
-
-            border-radius: 50px;
-
-            padding: 8px;
-
-            margin-right: 25px;
-
-            background: linear-gradient(180deg, #1e293b, #111827);
-
-            color: #e2e8f0;
-
-            transition: .3s;
-
-        }
-
-        .left_pannel .left_pannel_menu a:hover{
-
-            border-color: #ffffff;
-
-            transform: translateY(-3px);
-            transition: .3s;
-
-        }
-
-        .left_pannel .left_pannel_menu a:active{
-
-            transform: scale(.97);
-            transition: .3s;
-
-        }
-
-        /*Right Pannel*/
-        .home .right_pannel{
-
-            width: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            animation: popup3 .9s ease;
-
-        }
-
-        .home .right_pannel img{
-
-            border: 3px solid rgba(125,211,252,.65);
-
-            border-radius: 150px 5px 150px 5px ;
-
-            box-shadow: 0 0 30px rgba(125,211,252,.25);
-
-            background: linear-gradient(180deg, #0b1220, #111827);
-
-        }
-
-        .home .right_pannel i{
-
-            display: block;
-
+        .info{
             position: absolute;
-
-            right: 110px;
-
-            bottom: 90px;
-
-            font-size: 2em;
-
-            color: #7dd3fc;
-
-            border-radius: 50px;
-
-            padding: 15px;
-
-            animation: blink 2s ease-in-out infinite;
+            top: 20px;
+            left: 20px;
         }
 
-        .home .right_pannel .dot1,.dot2,.dot3,.dot4{
+        .info ul li a{
+            text-decoration: none;
+        }
 
+        .info ul li a i{
+            margin-right: 5px;
+        }
+
+        #img1{
+            box-shadow: 0px 5px 20px rgb(0, 0, 0,.8);
+        }
+
+        #html{
             position: absolute;
-
-            background-color: #7dd3fc;
-
-            border: 1px solid rgba(125,211,252,.8);
-
-            border-radius: 50px;
-
-            box-shadow: 0 0 30px rgba(125,211,252,.2);
-
+            top: 160px;
+            left: 80px;
+            font-size: 2.4em;
+            color: orangered;
         }
 
-        .home .right_pannel .dot1{
-
-            padding: 10px;
-
-            top: 180px;
-
-            right: 500px;
-
-            animation: profile 3.5s ease-in-out infinite;
-
+        #css{
+            position: absolute;
+            top: 260px;
+            left: 230px;
+            font-size: 2.4em;
+            color: rgb(0, 102, 255);
         }
 
-        .home .right_pannel .dot2{
+        #bootstrap{
+            position: absolute;
+            bottom:280px;
+            left: 80px;
+            font-size: 2.4em;
+            color: blueviolet;
+        }
 
-            padding: 7px;
+        #js{
+            position: absolute;
+            bottom: 180px;
+            left: 140px;
+            font-size: 2.4em;
+            color: rgb(174, 174, 3);
+        }
 
-            top: 130px;
-
+        #mining_pc{
+            position: absolute;
+            top: 220px;
             right: 100px;
-
-            animation: profile 4s ease-in-out infinite;
-
         }
 
-        .home .right_pannel .dot3{
-
-            padding: 5px;
-
-            bottom: 150px;
-
-            right: 600px;
-
-            animation: profile 3s ease-in-out infinite;
-
-        }
-
-        .home .right_pannel .dot4{
-
-            padding: 9px;
-
-            bottom: 65px;
-
-            right: 270px;
-
-            animation: profile 2.5s ease-in-out infinite;
-
-        }
-
-        /*//// About ////*/
-
-        .about{
-
-            opacity: 0;
-
-            transform: translateY(80px);
-
-            transition: all 1s ease;
-
-            display: flex;
-
-            background-color: #111827;
-
-            border: 1px solid rgba(125,211,252,.2);
-
-            border-radius: 25px;
-
-            padding: 30px;
-
-            margin-top: 80px;
-
-            height: 280px;
-
-            overflow: hidden;
-
-        }
-
-        /* Left Pannel 2 */
-        .about .left_pannel2{
-
-            display: flex;
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-        }
-
-        .about .left_pannel2 button{
-
-            background-color: #0f172a;
-
-            color: #7dd3fc;
-
-            border: 1px solid rgba(125,211,252,.35);
-
-            border-radius: 10px;
-
-            padding: 15px;
-
-            transition: .4s;
-
-        }
-
-        .about .left_pannel2 button:hover{
-
-            background-color: #2563eb;
-
-            color: #ffffff;
-
-            transform: translateY(-3px);
-            transition: .4s;
-
-        }
-
-        .about .left_pannel2 button:active{
-
-            transform: scale(.97);
-            transition: .4s;
-
-        }
-
-        /* Right pannel 2 */
-        .about .right_pannel2{
-
-            display: block;
-
-            border-left: .5px solid rgba(125,211,252,.5);
-
-            padding-left: 25px;
-
-        }
-
-        .name,.age,.location,.email{
-
-            display: flex;
-
-            align-items: center;
-
-            margin-right: 60px;
-
-            border-bottom: 1px solid #193455;
-
-        }
-
-        .name i,.age i,.location i,.email i{
-
-            margin-right: 20px;
-
-        }
-
-        .name2 span,.age2 span,.location2 span,.email2 span{
-
-            color: #7dd3fc;
-
-        }
-
-        .name2 p,.age2 p,.location2 p,.email2 p{
-
-            margin-top: 10px;
-
-            color: #ffffff;
-
-        }
-
-        /*//// Skills ////*/
-        .skills{
-
-            margin: 90px 0px;
-
+        #code{
+            position: absolute;
+            top: 120px;
+            left: 250px;
             padding: 20px;
-
-            opacity: 0;
-
-            transform: translateY(80px);
-
-            transition: all 1s ease;
-
-            overflow: hidden;
-
+            border-radius: 50%;
+            background-color: rgba(77, 193, 228, 0.3);
+            box-shadow: 0px 0px 20px #4fcfe5;
         }
 
-        .skills .lists {
+        #bitcoin{
+            position: absolute;
+            top: 190px;
+            right: 300px;
+            font-size: 2em;
+            color: orange;
+        }
 
+        #ethereum{
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            font-size: 2em;
+            color: darkgrey;
+        }
+
+        #monero{
+            position: absolute;
+            bottom: 100px;
+            right: 130px;
+            font-size: 2em;
+            color: orangered;
+        }
+
+        .about-skills{
             display: grid;
-
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-
-            overflow-X: scroll;
-
-            scrollbar-color: #0000 #0000;
-
+            grid-template-rows: 80% 20%;
         }
 
-        .skills .lists span{
-
-            background-color: #1f2937;
-
-            color: #e2e8f0;
-
-            margin: 10px;
-
-            padding: 20px;
-
-            width: 150px;
-
-            border: 0.1px solid rgba(226,232,240,.18);
-
-            border-radius: 15px;
-
-            font-size: 1.3em;
-
+        .about-me{            
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 50px;
+            padding: 35px;
+            align-items: center;
         }
 
-        .skills .lists span i{
-
-            font-size: 3em;
-        }
-
-        /*//// Projects ////*/
-
-        .projects ul{
-
+        .skills{
+            position: relative;
+            top: 100px;
+            right: 30px;
             display: flex;
-            flex-wrap: nowrap;
-            gap: 20px;
-            padding: 20px;
-            overflow-x: scroll;
-            scrollbar-color: #7dd3fc #1e293b;
-
-        }
-
-        .projects ul li{
-
-            display: block;
             align-items: center;
             justify-content: center;
-            margin-top: 12px;
-            border: 1px solid #1e293b;
-            box-shadow: inset 0 0 10px rgba(125,211,252,.15);
+            font-size: 2.5em;
+            gap: 30px;
+            background-color: #4b97df;
+            background: linear-gradient(180deg,#fff, #4b97df);
+        }
+
+        .services{
+            padding: 5px;
+        }
+
+        .web-services{
+            text-align: center;
             padding: 20px;
-            width: 320px;
-            transition: .4s;
-
         }
 
-        .projects ul li:hover{
-
-            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
-
-            transform: translateY(-3px);
-            transition: .3s;
-
+        .crypto-services{
+            padding-top: 20px;
         }
 
-        .projects ul li a{
-
-            display: flex;
-            color: #7dd3fc;
-            width: 300px;
-            padding: 10px;
-            background: linear-gradient(180deg, #1e293b, #0f172a, #1e293b);
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border-radius: 15px;    
-            box-shadow: inset 0 0 10px rgba(125,211,252,.15);        
-            margin-top: 10px;
-            transition: .4s;
-
+        .crypto-services .footer{
+            position: relative;
+            top: 40px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            border-radius: 90% 90% 0% 0%;
+            overflow: hidden;
+            text-align: center;
         }
 
-        .projects ul li a:hover{
-
-            background: linear-gradient(180deg, #3b82f6, #0f172a, #3b82f6);
-
-            transform: translateY(-3px);
-            transition: .3s;
-
+        .text-shadow{
+            text-shadow: -3px 5px 5px rgb(0, 0, 0,.3);
         }
 
-        .projects ul li a:active{
-
-            transform: scale(.97);
-            transition: .3s;
-
+        /* ANIMATION */
+        .floating {
+        animation: float 3s ease-in-out infinite;
         }
 
-        /*===== Popup =====*/
-
-        @keyframes popup1{
-
-            from{
-
-                opacity:0;
-
-                transform:translateY(-15px);
-
-            }
-
-            to{
-
-                opacity:1;
-
-                transform:translateY(0);
-
-            }
-
+        .floating2{
+            animation: float 3s ease-in-out infinite;
         }
 
-        @keyframes popup2{
-
-            from{
-
-                opacity: 0;
-
-                transform: translateX(-10px);
-
-            }
-
-            to{
-
-                opacity: 1;
-
-                transform: translateX(0);
-
-            }
+        @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
         }
 
-        @keyframes popup3{
-
-            from{
-
-                opacity: 0;
-
-                transform: translateY(15px);
-
-            }
-
-            to{
-
-                opacity: 1;
-
-                transform: translateY(0);
-
-            }
-        }
-
-        @keyframes blink {
         50% {
-            opacity: 0;
+            transform: translateY(-13px);
         }
         }
 
-        @keyframes profile{
-
-            0%,100%{
-                transform:translateY(0);
-            }
-
-            50%{
-                transform:translateY(12px);
-            }
-
-        }
-        
-        .left_pannel h4 .cursor,
-        .left_pannel2 .cursor2{
-            animation: blink 0.7s infinite;
+        @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
         }
 
-        /*===== Mouse Move =====*/
-
-        .cursor-glow{
-
-            position:fixed;
-
-            width:250px;
-            height:250px;
-
-            border-radius:50%;
-
-            background:radial-gradient(
-                rgba(91, 192, 225, 0.18),
-                transparent 70%
-            );
-
-            pointer-events:none;
-
-            transform:translate(-50%,-50%);
-
-            filter:blur(40px);
-
-            z-index:-1;
-
+        50% {
+            transform: translateY(-8px);
         }
-
-        /*===== PAGE STYLE =====*/
-        .show{
-            opacity:1;
-            transform:translateY(0);
         }
-
-        /*==============================
-        MOBILE (360px-768px)
-        ===============================*/
-
-        @media (max-width:768px){
-
-            body{
-                padding:10px;
-            }
-
-            .taskbar{
-                padding:15px;
-            }
-
-            .taskbar .menu{
-                display:none;
-            }
-
-            .taskbar h1{
-                font-size:1.2rem;
-            }
-
-            .taskbar .l_d_cv a{
-                font-size:.8rem;
-                padding:8px 10px;
-            }
-
-            /* Home */
-
-            .home{
-                display:flex;
-                flex-direction:column-reverse;
-                text-align:center;
-                gap:40px;
-                margin-top:90px;
-            }
-
-            .home .left_pannel,
-            .home .right_pannel{
-                width:100%;
-                padding:0;
-            }
-
-            .home .left_pannel h1{
-                font-size:2.3rem;
-            }
-
-            .home .left_pannel h4{
-                font-size:1.2rem !important;
-            }
-
-            .home .left_pannel p{
-                font-size:1rem;
-                line-height:1.8;
-            }
-
-            .home .right_pannel img{
-                width:270px !important;
-                height:270px !important;
-            }
-
-            .right_pannel i{
-                right:35px;
-                bottom:30px;
-            }
-
-            .dot1,
-            .dot2,
-            .dot3,
-            .dot4{
-                display:none;
-            }
-
-            .left_pannel .left_pannel_menu{
-                justify-content:center;
-            }
-
-            /* About */
-
-            .about{
-                flex-direction:column;
-                height:auto;
-                padding:20px;
-            }
-
-            .about .left_pannel2{
-                flex-direction:column;
-            }
-
-            .about .left_pannel2 img{
-                display: none;
-                width:100% !important;
-                height:250px !important;
-                margin:0 0 20px 0 !important;
-            }
-
-            .about .left_pannel2 p{
-                width:100% !important;
-            }
-
-            .about .right_pannel2{
-                border-left:none;
-                padding-left:0;
-                margin-top:30px;
-                width:100%;
-            }
-
-            .name,
-            .age,
-            .location,
-            .email{
-                margin-right:0;
-            }
-
-            /* Skills */
-
-            .skills{
-                padding:0;
-            }
-
-            .skills .lists{
-                grid-template-columns:1fr 1fr;
-                gap:15px;
-                overflow:visible;
-            }
-
-            .skills .lists span{
-                width:auto;
-                margin:0;
-            }
-
-            /* Download CV */
-            .download-cv,
-            .projects,
-            .experience,
-            .contact{
-                padding:20px !important;
-            }
-
-        }
-
     </style>
+
 </head>
 <body>
 
-    <!--Main-->
-    <div class="main">
-        
-        <!-- Task Bar -->
-        <div class="taskbar">
-
-            <h1>Hello .......</h1>
-
-            <div class="menu">
-
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
-
-            </div>
-
-            <div class="l_d_cv">
-
-                <a href="MoeHtet_CV.txt" download="MoeHtet_CV.txt">Download CV</a>
-
-            </div>
-
+    <div class="bg-dark.bg-gradient section" style="text-align: center; padding-top: 50px;">
+        <img id="img1" src="img1.jpg" class="rounded mx-auto d-block w-25 h-35 floating" alt="...">
+        <br><br>
+        <label for="" style="text-align: center;">
+            <h2>Ko Moe Htet</h2>
+            <p class="fst-italic">"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
+            <p class="fst-italic">“Building the digital world with code, while building my daily income through crypto.”</p>
+        </label>
+        <br>
+        <div>
+            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Junior Frontend Developer</p>
+            &
+            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Feature Treader,Crypto Mining</p>
         </div>
-
-        <!-- home -->
-        <div class="home" id="home">
-
-            <!-- Left -->
-            <div class="left_pannel">
-
-                <h1> Ko Moe <span> Htet </span> </h1>
-
-                <span style="color: #ffffff;">My Level</span>
-                <h4 style="font-size: 1.5em; margin-top: 0;">
-                    <span id="text_style"></span>
-                    <span class="cursor">|</span>
-                </h4>
-
-                <p>"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
-
-                <button class="a"><a href="#contact" class="a" style="background: none; border: none;">Contact Me <i class="fa-solid fa-paper-plane"></i></a></button>
-
-                <div class="left_pannel_menu">
-
-                    <a href="https://github.com/MoeHtet9" target="_blank"><i class="fa-brands fa-github" style="font-size: 1.5em; background-color: #000; border-radius: 50px; padding: 2px;"></i></a>
-                    <a href="https://www.t.me/MoeHtetr" target="_blank"><i class="fa-brands fa-telegram" style="color: #7dd3fc; background-color: #0f172a; border-radius: 50px; font-size: 1.7em;"></i></a>
-                    <a href="https://www.tiktok.com/@moehtet_moehtet?_r=1&_t=ZS-98BH99c8UWT" target="_blank"><i class="fa-brands fa-tiktok" style="background-color: #111827; padding: 3px; border-radius: 60px; font-size: 1.3em; color: #cbd5e1;"></i></a>
-
-                </div>
-
-            </div>
-
-            <!-- Right -->
-            <div class="right_pannel">
-
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-                <div class="dot3"></div>
-                <div class="dot4"></div>
-
-                <img src="img1.jpg" alt="error" style="width: 370px;height: 340px;">
-                <i class="fa-solid fa-code"></i>
-
-            </div>
-
-        </div>
-
-        <!-- About -->
-        <div class="about p" id="about">
-
-            <div class="left_pannel2">
-
-                <img src="img2.jpg" alt="error" style="height: 90%;width: 45%; margin-right: 25px; border-radius: 25px; box-shadow: 0px 0px 10px rgba(125,211,252,.35);">
-
-                <div>
-                    
-                    <label style="color: #7dd3fc;">ABOUT ME</label>
-
-                    <h1 style="color: #ffffff;">About Me</h1>
-
-                    <p style="color: #ffffff; width: 400px;">
-                        <span>
-                            Code. Learn. Build. Repeat.<br>
-                            Hello, I'm Moe Htet, an aspiring Full Stack Developer.
-                            I believe real growth comes from consistent practice and building projects, not just finishing tutorials.
-                            Every challenge is an opportunity to improve, and every project brings me one step closer to my goal.
-                        </span>
-                        <span class="cursor2">|</span>
-                    </p>
-
-                    <a href="https://www.t.me/MoeHtetr"><button>Let's Talk <i class="fa-solid fa-comment"></i></button></a>
-
-                </div>
-
-            </div>
-
-            <div class="right_pannel2">
-
-                <div class="name">
-                    <i class="fa-solid fa-user" style="color: #7dd3fc; font-size: 1.5em;"></i>
-                    <div class="name2">
-                        <span>Name</span>
-                        <p>Ko Moe Htet</p>
-                    </div>
-                </div>
-                
-                <div class="age">
-                    <i class="fa-solid fa-thin fa-calendar" style="color: #7dd3fc; font-size: 1.5em;"></i>
-                    <div class="age2">
-                        <span>Age</span>
-                        <p>18</p>
-                    </div>
-                </div>
-                
-                <div class="location">
-                    <i class= "fa-solid fa-location-dot" style="color: #7dd3fc; font-size: 1.5em;"></i>
-                    <div class="location2">
-                        <span>Location</span>
-                        <p>Yangon, Myanmar</p>
-                    </div>
-                </div>
-                
-                <div class="email">
-                    <i class="fa-regular fa-envelope" style="color: #7dd3fc; font-size: 1.5em;"></i>
-                    <div class="email2">
-                        <span>Email</span>
-                        <p>moehtet17112024@gmail.com</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Download CV -->
-        <div class="download-cv p" id="download-cv" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-right">
-
-            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Download CV</h2>
-
-            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">
-                Hello, I'm <strong>Ko Moe Htet</strong>. I create clean web experiences and simple automation tools while learning every day.
-            </p>
-
-            <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
-                <li style="margin-bottom: 12px;">• HTML / CSS responsive development with polished layout work.</li>
-                <li style="margin-bottom: 12px;">• JavaScript interaction and Python-powered Telegram bots.</li>
-                <li style="margin-bottom: 12px;">• Portfolio websites, automation scripts, and developer tools.</li>
+        <a href="#2" style="margin-right: 50px;">About Me</a> <a href="#3">My Services</a>
+        <!-- position absolute -->
+        <div class="btn-group dropend info">
+            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                My Info
+            </button>
+            <ul class="dropdown-menu bg-dark" style="padding: 20px;">
+                <li><a href="https://coruscating-muffin-2682d4.netlify.app/" class="text-light"><i class="fa-solid fa-code"></i> My Team</a></li>
+                <br>
+                <li><a href="https://www.t.me/MoeHtetr" class="text-light"><i class="fa-brands fa-telegram"></i>Telegram</a></li>
+                <br>
+                <li><a href="https://github.com/MoeHtet9" class="text-light"><i class="fa-brands fa-github"></i> GitHub</a></li>
             </ul>
-
-            <a href="MoeHtet_CV.txt" download="MoeHtet_CV.txt" class="a" style="display: inline-block; margin-top: 20px;">Download Full CV</a>
-
         </div>
+        <img title="PC Mining" id="mining_pc" src="images/mining_pc.png" alt="" width="200px" height="200px">
+        <i title="HTML5" id="html" class="fa-brands fa-html5 text-shadow"></i>    
+        <i title="CSS" id="css" class="fa-brands fa-css3-alt text-shadow"></i>
+        <i title="Bootstrap" id="bootstrap" class="fa-brands fa-bootstrap text-shadow"></i>
+        <i title="JavaScript" id="js" class="fa-brands fa-square-js text-shadow"></i>
+        <h3 title="Coding" id="code"><i class="fa-solid fa-code" text-shadow></i></h3>
+        <i title="Bit Coin" id="bitcoin" class="fa-brands fa-bitcoin text-shadow"></i>
+        <i title="Ethereum" id="ethereum" class="fa-brands fa-ethereum text-shadow"></i>
+        <i title="Monero" id="monero" class="fa-brands fa-monero text-shadow"></i>
+    </div>
 
-        <!-- Skills -->
-        <div class="skills p" id="skills">
+    <div class="section about-skills" id="2">
 
-            <h2 style="color: #7dd3fc;">My Skills</h2>
+        <div class="about-me">
 
-            <div class="lists">
+            <div>
 
-                <span data-aos="zoom-in-right">
-                    <i class="fa-brands fa-html5" style="color: orangered; background-color: transparent;"></i>
-                    <p>HTML   95%</p>
-                </span>
+                <div class="card shadow mb-3 bg-body-tertiary " style="width: 100%;height: 200px;">
+                    <div class="card-header">
+                        <h5 class="card-title">About</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+                        <p class="card-text">My goal is to become a Full Stack Web Developer & Deployer.
 
-                <span data-aos="zoom-in-right">
-                    <i class="fa-brands fa-css3-alt" style="color: #7dd3fc; background-color: transparent;"></i>
-                    <p>CSS   88%</p>
-                </span>
+I am continuously learning, building real-world projects, solving problems, and improving my skills every day.
 
-                <span data-aos="zoom-in-right">
-                    <i class="fa-brands fa-js" style="color: #facc15;"></i>
-                    <p>JavaScript   30%</p>
-                </span>
-
-                <span data-aos="zoom-in-left">
-                    <i class="fa-brands fa-python" style="color: #22c55e;"></i>
-                    <p>Tg bot.py   10%</p>
-                </span>
-
-                <span data-aos="zoom-in-left"></span>
-
-                <span data-aos="zoom-in-left"></span>
+My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.</p>
+                    </div>
+                </div>
+                
+                <div class="card text-center shadow bg-body-tertiary ">
+                    <div class="card-header">
+                        Other Ventures
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">₿ Crypto Trading</h5>
+                        <p class="card-text">Exploring market analysis, risk management, and disciplined trading strategies.</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">⛏ Crypto Mining</h5>
+                        <p class="card-text">Learning about mining infrastructure, hardware, energy efficiency, and blockchain networks.</p>
+                    </div>
+                    <h5 class="card-footer text-body-dark fst-italic">
+                        "Learn. Build. Break. Fix. Apply. Level Up." 🚀 <a href="#3" class="card-link">Services</a>
+                    </h5>
+                </div>
 
             </div>
 
-        </div>
+            <div>
+                <h3>Basic Information</h3>
+                <br><br>
+                <table class="table table-borderless h-50">
+                    <tbody>
+                        <tr>
+                            <th>AGE :</th>
+                            <td>18 Years</td>
+                        </tr>
+                        <tr>
+                            <th>EMAIL :</th>
+                            <td>moehtet17112024@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>PHONE :</th>
+                            <td>+959 792899718</td>
+                        </tr>
+                        <tr>
+                            <th>NATIONALITY:</th>
+                            <td>Myanmar</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="skills">
 
-        <!-- Projects -->
-        <div class="projects p" id="projects" style="margin-top: 60px; padding: 30px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="flip-up">
+                    <i class="fa-brands fa-html5 shadow " style="color: orangered;"></i>    
+                    <i class="fa-brands fa-css3-alt shadow " style="color: #126abd;"></i>
+                    <i class="fa-brands fa-square-js shadow " style="color: rgb(255, 221, 0);"></i>
 
-            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Projects</h2>
-
-            <ul style="color: #cbd5e1; margin-top: 20px; list-style: none; padding-left: 0;">
-
-                <li>
-                    <h3>Team Project 1</h3>
-                    <img src="images/pj1.p1.jpg" alt="pj1" style="width: 300px; height: auto;">
-                    <br>
-                    <img src="images/pj1.p2.jpg" alt="pj1" style="width: 300px; height: auto;">
-                    <a href="encrypted-text-sharing-platform-production.up.railway.app" target="blank" style=" text-decoration: none;">open</a>
-                </li>
-
-            </ul>
-
-        </div>
-
-        <!-- Experience -->
-        <div class="experience p" id="experience" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px;" data-aos="zoom-out">
-            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Experience</h2>
-            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">I have been learning and building projects with HTML, CSS, JavaScript, and Python. I focus on creating clear code and improving my skills every day.</p>
-            <div style="display: grid; gap: 14px; margin-top: 20px;">
-                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
-                    <strong style="color: #e2e8f0;">Frontend development</strong>
-                    <p style="color: #94a3b8; margin: 8px 0 0;">Built user interfaces with responsive layouts and interactive elements.</p>
-                </div>
-                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
-                    <strong style="color: #e2e8f0;">Telegram bot scripting</strong>
-                    <p style="color: #94a3b8; margin: 8px 0 0;">Created Python bots to automate chat tasks and deliver notifications.</p>
-                </div>
-                <div style="padding: 18px; background: rgba(14, 20, 35, 0.95); border-radius: 16px; border: 1px solid rgba(125,211,252,0.12);">
-                    <strong style="color: #e2e8f0;">I work in a team</strong>
-                    <p style="color: #94a3b8; margin: 8px 0 0;">I was involved in the design department.</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="contact p" id="contact" style="margin-top: 60px; padding: 40px; background: rgba(15,23,42,0.9); border: 1px solid rgba(125,211,252,0.18); border-radius: 24px; margin-bottom: 40px;" data-aos="fade-down">
-            <h2 style="color: #7dd3fc; margin-bottom: 20px;">Contact</h2>
-            <p style="color: #cbd5e1; line-height: 1.8; max-width: 780px;">If you'd like to work together, feel free to reach out. I'm open to collaboration, internships, and freelance work.</p>
-            <p style="color: #94a3b8; margin-top: 18px;">Email: <a href="mailto:moehtet17112024@gmail.com" style="color: #7dd3fc; text-decoration: none;">moehtet17112024@gmail.com</a></p>
-            <p style="color: #94a3b8; margin-top: 18px;">Telegram: <a href="https://www.t.me/MoeHtetr" style="color: #7dd3fc; text-decoration: none;">@MoeHtetr</a></p>
-            <p style="color: #94a3b8; margin-top: 18px;">Phone no: <span style="color: #7dd3fc;">959-792899718</span></p>
+            
         </div>
 
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+    <div class="section services" id="3">
 
-        AOS.init();
+        <div style="text-align: center;">
+            <span>SERVICES</span>
+            <h4 class="fst-italic">What Can I Help You With?</h4>
+        </div>
+        <br>
+        <div class="d-flex" style="justify-content: space-around; align-items: center; height: 80%;">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="images/code.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Web Services</h5>
+                    <p class="card-text">I deploy your frontend website and make it accessible online.</p>
+                    <p class="card-text">Frontend Deployment Deploy your existing website and make it live online.</p>
+                    <a href="#3/1" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
 
-        // Text Style //
+            <div class="card shadow" style="width: 18rem;">
+                <img src="images/crypto_chart.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Crypto Services</h5>
+                    <p class="card-text">Futures Trading Guidance Learn trading concepts, risk management & strategies.</p>
+                    <p class="card-text">Solo Mining Hashrate Rental Rent hashrate for solo mining.</p>
+                    <a href="#3/2" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
 
-        const text = "Junior Frontend Developer";
-        const typing = document.getElementById("text_style");
+    </div>
 
-        let index = 0;
+    <div class="section web-services" id="3/1">
 
-        function typeEffect() {
-        if (index < text.length) {
-            typing.textContent += text[index];
-            index++;
+        <h4><i class="fa-solid fa-laptop text-primary"></i> WEB DEVELOPMENT SERVICES</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0 shadow">
+                <div class="card">
+                <div class="card-body">
+                    <i class="fa-solid fa-pager text-primary" style="font-size: 5em;"></i>
+                    <h5 class="card-title">Frontend Development & Update</h5>
+                    <p class="card-text fst-italic">“Build. Improve. Update.”</p>
+                    <p class="card-text text-primary">Need a new website frontend?
+I can build modern, responsive and user-friendly interfaces from scratch.
+Already have a website? I can update, improve and maintain your existing frontend.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">I can help with:</li>
+                        <li class="list-group-item">🌐 New Frontend Development</li>
+                        <li class="list-group-item">📱 Responsive Design</li>
+                        <li class="list-group-item">🔧 Existing Website Updates</li>
+                        <li class="list-group-item">⚡ Basic Performance Improvements</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 shadow">
+                <div class="card">
+                <div class="card-body">
+                    <i class="fa-solid fa-cloud-arrow-up text-primary" style="font-size: 5em;"></i>
+                    <h5 class="card-title">Website Hosting</h5>
+                    <p class="card-text fst-italic">“From Localhost to Live.”</p>
+                    <p class="card-text text-primary">Already have a website but don't know how to put it online?
+I can deploy your frontend website and help make it accessible on the internet.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">I can help with:</li>
+                        <li class="list-group-item">🌍 Hosting Setup</li>
+                        <li class="list-group-item">🔗 Custom Domain Connection</li>
+                        <li class="list-group-item">🔒 HTTPS / SSL Setup</li>
+                        <li class="list-group-item">📦 GitHub-based Deployment</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
 
-            setTimeout(typeEffect, 200);
-        };
-        };
+    </div>
 
-        typeEffect();
+    <div class="section crypto-services" id="3/2">
 
-        // Mouse Move //
+        <h4 style="text-align: center;"><i class="fa-brands fa-bitcoin text-success"></i> CRYPTO SERVICES</h4>
 
-        const glow = document.createElement("div");
+        <div class="card border-success m-3 shadow" style="max-width: 100%; height: 65%;display: grid; grid-template-columns: 24% 50% 25%; align-items: center;">
+            <div style="width: 100%; height: 100%; overflow: hidden; padding: 10px; text-align: center;">
+                <i class="fa-solid fa-hand-holding-dollar text-success" style="font-size: 5em; margin-top: 100px;"></i>
+                <br><br>
+                <h5 class="text-success fst-italic" style="text-align: center;">Fast . Simple . Secure</h5>
+            </div>
+            <div>
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title text-success">USDT Bye & Sell</h5>
+                    <p class="card-text">Bye or Sell USDT with safe and convenient transactions.Fast process and trusted service.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"> Solo Mining Coins</h5>
+                            <div class="card" style="width: 18rem;">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">BTC</li>
+                                    <li class="list-group-item">ETC</li>
+                                    <li class="list-group-item">MONERO</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card-body">
+                            <h5 class="card-title text-success"><i class="fa-solid fa-money-bill-trend-up"></i> Future Treading</h5>
+                            <p class="card-text">Treading Technology Sharing Telegram Channel : <a href="https://t.me/cryptomatemyanmar">Join</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="m-3">
+                <h4>My Wallet Address</h4>
+                <br>
+                <span class="badge text-bg-warning">BNB Smart Chain (BEP20)</span>
+                <p>0xd10d8c94606733c6a7831b0dacd008476b016a85</p>
+                <span class="badge text-bg-danger">Tron (TRC20)</span>
+                <p>THxm7TtUbH1Xj6B8BuEEibmattkqDSCcYp</p>
+                <span class="badge text-bg-primary">The Open Network (TON)</span>
+                <p>UQB-aC7pGjllWLXvbdByNkrNuqzfg-bqDzKMqG9ahb8nUcRP</p>
+            </div>
+        </div>
 
-        glow.className = "cursor-glow";
+        <div class="footer">
+            <div class="text-bg-secondary p-3 fst-italic" style="height: 80px;">
+                <h4>
+                    <i class="fa-solid fa-server" style="margin-right: 150px; font-size: 1.3em;"></i>
+                    Need My Services?
+                    <a href="https://www.t.me/MoeHtetr" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="font-size: .7em;">Contact Me  <i class="fa-solid fa-paper-plane"></i></a>
+                    <i class="fa-solid fa-money-check-dollar" style="margin-left: 150px; font-size: 1.3em;"></i>
+                </h4>                
+            </div>
+        </div>
 
-        document.body.appendChild(glow);
-
-        document.addEventListener("mousemove", (e) => {
-
-            glow.style.left = e.clientX + "px";
-            glow.style.top = e.clientY + "px";
-
-        });
-
-        // PAGE ANIMATION //
-
-        const hiddenElements = document.querySelectorAll(".p");
-
-        const observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        });
-
-        hiddenElements.forEach((element) => {
-
-            observer.observe(element);
-
-        });
-
-    </script>
+    </div>
 
 </body>
 </html>
