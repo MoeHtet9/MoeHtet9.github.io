@@ -198,6 +198,22 @@
             transform: translateY(-8px);
         }
         }
+
+        /* ===== Responsive Hero Reposition ===== */
+        @media (max-width: 768px) {
+            .section:first-child{position:relative;padding-top:30px !important;overflow:hidden;}
+            #img1{width:180px !important;}
+            #html{top:130px;left:20px;font-size:1.8rem;}
+            #css{top:185px;left:145px;font-size:1.8rem;}
+            #bootstrap{bottom:190px;left:25px;font-size:1.8rem;}
+            #js{bottom:135px;left:105px;font-size:1.8rem;}
+            #code{top:95px;left:50%;transform:translateX(-50%);padding:15px;font-size:1rem;}
+            #bitcoin{top:135px;right:35px;font-size:1.5rem;}
+            #ethereum{top:75px;right:12px;font-size:1.5rem;}
+            #monero{bottom:65px;right:25px;font-size:1.5rem;}
+            #mining_pc{width:120px;height:120px;top:255px;right:10px;}
+            .info{top:10px;left:10px;z-index:10;}
+        }
     </style>
 
 </head>
