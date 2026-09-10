@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.min.css.js/bootstrap.css">
     <script src="bootstrap.min.css.js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
 
@@ -199,21 +200,565 @@
         }
         }
 
-        /* ===== Responsive Hero Reposition ===== */
-        @media (max-width: 768px) {
-            .section:first-child{position:relative;padding-top:30px !important;overflow:hidden;}
-            #img1{width:180px !important;}
-            #html{top:130px;left:20px;font-size:1.8rem;}
-            #css{top:185px;left:145px;font-size:1.8rem;}
-            #bootstrap{bottom:190px;left:25px;font-size:1.8rem;}
-            #js{bottom:135px;left:105px;font-size:1.8rem;}
-            #code{top:95px;left:50%;transform:translateX(-50%);padding:15px;font-size:1rem;}
-            #bitcoin{top:135px;right:35px;font-size:1.5rem;}
-            #ethereum{top:75px;right:12px;font-size:1.5rem;}
-            #monero{bottom:65px;right:25px;font-size:1.5rem;}
-            #mining_pc{width:120px;height:120px;top:255px;right:10px;}
-            .info{top:10px;left:10px;z-index:10;}
+        /* BITCOIN CHART */
+        canvas{
+            background:#111213;
+            padding:10px;
         }
+
+        /* =========================================
+   TABLET RESPONSIVE
+   768px - 991px
+========================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .foolting_i {
+        display: none;
+    }
+
+    .section {
+        height: auto;
+        min-height: 100vh;
+        scroll-snap-align: start;
+    }
+
+    /* HOME */
+
+    #img1 {
+        width: 30% !important;
+        height: auto !important;
+    }
+
+    #mining_pc {
+        width: 150px;
+        height: 150px;
+        right: 30px;
+        top: 250px;
+    }
+
+    #html {
+        left: 40px;
+        top: 180px;
+    }
+
+    #css {
+        left: 120px;
+        top: 300px;
+    }
+
+    #bootstrap {
+        left: 40px;
+        bottom: 180px;
+    }
+
+    #js {
+        left: 100px;
+        bottom: 100px;
+    }
+
+    #code {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #bitcoin {
+        right: 180px;
+    }
+
+    #ethereum {
+        right: 40px;
+    }
+
+    #monero {
+        right: 50px;
+        bottom: 80px;
+    }
+
+
+    /* ABOUT */
+
+    .about-me {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .about-me .card {
+        height: auto !important;
+    }
+
+    .skills {
+        top: 30px;
+        right: 0;
+        font-size: 2em;
+    }
+
+
+    /* SERVICES */
+
+    .services > .d-flex {
+        flex-wrap: wrap;
+        gap: 30px;
+        height: auto !important;
+        padding: 20px;
+    }
+
+    .services .card {
+        width: 18rem !important;
+    }
+
+
+    /* WEB SERVICES */
+
+    .web-services {
+        padding: 30px;
+        height: auto;
+    }
+
+    .web-services .row {
+        gap: 20px;
+    }
+
+
+    /* CRYPTO */
+
+    .crypto-services {
+        padding: 25px 15px;
+        height: auto;
+    }
+
+    .crypto-services > .card {
+        grid-template-columns: 1fr 1fr !important;
+        height: auto !important;
+    }
+
+    .crypto-services > .card > div:last-child {
+        grid-column: span 2;
+    }
+
+    .crypto-services .footer {
+        position: relative;
+        top: 30px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   Under 767px
+========================================= */
+
+@media (max-width: 767px) {
+
+    .foolting_i {
+        display: none;
+    }
+
+    html {
+        scroll-snap-type: none;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .section {
+        height: auto;
+        min-height: 100vh;
+        scroll-snap-align: none;
+    }
+
+
+    /* =========================
+       HOME SECTION
+    ========================= */
+
+    .section:first-child {
+        padding: 30px 15px !important;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    #img1 {
+        width: 50% !important;
+        height: auto !important;
+    }
+
+    .section:first-child h2 {
+        font-size: 1.6rem;
+    }
+
+    .section:first-child p {
+        font-size: .9rem;
+    }
+
+    .section:first-child > div {
+        margin-bottom: 15px;
+    }
+
+
+    /* My Info */
+
+    .info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .info button {
+        font-size: .8rem;
+    }
+
+
+    /* Home Navigation */
+
+    .section:first-child > a {
+        margin-right: 15px !important;
+        font-size: .9rem;
+    }
+
+
+    /* Floating icons */
+
+    #mining_pc {
+        width: 100px;
+        height: 100px;
+        right: 10px;
+        top: 330px;
+    }
+
+    #html {
+        left: 20px;
+        top: 300px;
+        font-size: 1.8em;
+    }
+
+    #css {
+        left: 70px;
+        top: 370px;
+        font-size: 1.8em;
+    }
+
+    #bootstrap {
+        left: 20px;
+        bottom: 100px;
+        font-size: 1.8em;
+    }
+
+    #js {
+        left: 70px;
+        bottom: 50px;
+        font-size: 1.8em;
+    }
+
+    #code {
+        top: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    #bitcoin {
+        top: 350px;
+        right: 100px;
+        font-size: 1.5em;
+    }
+
+    #ethereum {
+        top: 300px;
+        right: 20px;
+        font-size: 1.5em;
+    }
+
+    #monero {
+        right: 30px;
+        bottom: 80px;
+        font-size: 1.5em;
+    }
+
+
+    /* =========================
+       ABOUT SECTION
+    ========================= */
+
+    .about-skills {
+        display: block;
+        min-height: 100vh;
+        padding: 20px 10px;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        align-items: stretch;
+    }
+
+    .about-me > div {
+        width: 100%;
+    }
+
+    .about-me .card {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .about-me .card-body {
+        padding: 15px;
+    }
+
+    .about-me .card-text {
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+
+
+    /* Basic Information */
+
+    .about-me h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-me table {
+        font-size: .85rem;
+    }
+
+    .about-me table th,
+    .about-me table td {
+        padding: 8px 5px;
+    }
+
+
+    /* Skills */
+
+    .skills {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 2rem;
+        gap: 20px;
+    }
+
+
+    /* =========================
+       SERVICES SECTION
+    ========================= */
+
+    .services {
+        padding: 30px 15px;
+        min-height: 100vh;
+    }
+
+    .services > .d-flex {
+        flex-direction: column;
+        height: auto !important;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    .services .card {
+        width: 100% !important;
+        max-width: 350px;
+    }
+
+    .services .card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       WEB SERVICES
+    ========================= */
+
+    .web-services {
+        padding: 30px 15px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .web-services .row {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .web-services .col-sm-6 {
+        width: 100%;
+    }
+
+    .web-services .card {
+        height: auto;
+    }
+
+    .web-services .card-body {
+        padding: 20px 15px;
+    }
+
+    .web-services .card-title {
+        font-size: 1.1rem;
+    }
+
+    .web-services .card-text {
+        font-size: .9rem;
+        line-height: 1.6;
+    }
+
+    .web-services .list-group-item {
+        font-size: .9rem;
+    }
+
+
+    /* =========================
+       CRYPTO SERVICES
+    ========================= */
+
+    .crypto-services {
+        padding: 30px 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .crypto-services > .card {
+        display: flex !important;
+        flex-direction: column;
+        height: auto !important;
+        margin: 10px 0 !important;
+        padding: 10px;
+    }
+
+    .crypto-services > .card > div {
+        width: 100% !important;
+    }
+
+
+    /* BTC Chart */
+
+    .crypto-services canvas {
+        width: 100% !important;
+        height: 250px !important;
+    }
+
+    #price {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+
+    /* USDT / Mining / Trading */
+
+    .crypto-services .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .crypto-services .col-sm-6 {
+        width: 100%;
+    }
+
+    .crypto-services .card {
+        width: 100% !important;
+    }
+
+
+    /* Wallet */
+
+    .crypto-services .m-3 {
+        margin: 15px !important;
+        word-break: break-all;
+    }
+
+    .crypto-services .m-3 p {
+        font-size: .75rem;
+    }
+
+
+    /* Footer */
+
+    .crypto-services .footer {
+        position: relative;
+        top: 20px;
+        width: 100%;
+    }
+
+    .crypto-services .footer > div {
+        height: auto !important;
+        padding: 20px 10px !important;
+    }
+
+    .crypto-services .footer h4 {
+        font-size: .9rem;
+    }
+
+    .crypto-services .footer h4 i {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   Under 400px
+========================================= */
+
+@media (max-width: 400px) {
+
+    .foolting_i {
+        display: none;
+    }
+
+    #img1 {
+        width: 60% !important;
+    }
+
+    .section:first-child h2 {
+        font-size: 1.4rem;
+    }
+
+    .section:first-child p {
+        font-size: .8rem;
+    }
+
+    #mining_pc {
+        width: 80px;
+        height: 80px;
+    }
+
+    #html,
+    #css,
+    #bootstrap,
+    #js {
+        font-size: 1.5em;
+    }
+
+    #bitcoin,
+    #ethereum,
+    #monero {
+        font-size: 1.2em;
+    }
+
+    .about-me {
+        padding: 5px;
+    }
+
+    .about-me .card-text {
+        font-size: .8rem;
+    }
+
+    .web-services .card-text,
+    .web-services .list-group-item {
+        font-size: .8rem;
+    }
+
+}
+
     </style>
 
 </head>
@@ -247,15 +792,18 @@
                 <li><a href="https://github.com/MoeHtet9" class="text-light"><i class="fa-brands fa-github"></i> GitHub</a></li>
             </ul>
         </div>
-        <img title="PC Mining" id="mining_pc" src="images/mining_pc.png" alt="" width="200px" height="200px">
-        <i title="HTML5" id="html" class="fa-brands fa-html5 text-shadow"></i>    
-        <i title="CSS" id="css" class="fa-brands fa-css3-alt text-shadow"></i>
-        <i title="Bootstrap" id="bootstrap" class="fa-brands fa-bootstrap text-shadow"></i>
-        <i title="JavaScript" id="js" class="fa-brands fa-square-js text-shadow"></i>
-        <h3 title="Coding" id="code"><i class="fa-solid fa-code" text-shadow></i></h3>
-        <i title="Bit Coin" id="bitcoin" class="fa-brands fa-bitcoin text-shadow"></i>
-        <i title="Ethereum" id="ethereum" class="fa-brands fa-ethereum text-shadow"></i>
-        <i title="Monero" id="monero" class="fa-brands fa-monero text-shadow"></i>
+        <div class="foolting_i">
+            <img title="PC Mining" id="mining_pc" src="images/mining_pc.png" alt="" width="200px" height="200px">
+            <i title="HTML5" id="html" class="fa-brands fa-html5 text-shadow"></i>    
+            <i title="CSS" id="css" class="fa-brands fa-css3-alt text-shadow"></i>
+            <i title="Bootstrap" id="bootstrap" class="fa-brands fa-bootstrap text-shadow"></i>
+            <i title="JavaScript" id="js" class="fa-brands fa-square-js text-shadow"></i>
+            <h3 title="Coding" id="code"><i class="fa-solid fa-code" text-shadow></i></h3>
+            <i title="Bit Coin" id="bitcoin" class="fa-brands fa-bitcoin text-shadow"></i>
+            <i title="Ethereum" id="ethereum" class="fa-brands fa-ethereum text-shadow"></i>
+            <i title="Monero" id="monero" class="fa-brands fa-monero text-shadow"></i>
+        </div>
+        
     </div>
 
     <div class="section about-skills" id="2">
@@ -416,8 +964,15 @@ I can deploy your frontend website and help make it accessible on the internet.<
 
         <div class="card border-success m-3 shadow" style="max-width: 100%; height: 65%;display: grid; grid-template-columns: 24% 50% 25%; align-items: center;">
             <div style="width: 100%; height: 100%; overflow: hidden; padding: 10px; text-align: center;">
-                <i class="fa-solid fa-hand-holding-dollar text-success" style="font-size: 5em; margin-top: 100px;"></i>
-                <br><br>
+                <div class="card">
+                    <h5>Bitcoin (BTC/USDT)</h5>
+
+                    <div class="price text-warning bg-dark" id="price">Loading...</div>
+
+                    <canvas id="btcChart"></canvas>
+                </div>
+                <i class="fa-solid fa-hand-holding-dollar text-success my-3" style="font-size: 5em;"></i>
+                <br>
                 <h5 class="text-success fst-italic" style="text-align: center;">Fast . Simple . Secure</h5>
             </div>
             <div>
@@ -472,6 +1027,58 @@ I can deploy your frontend website and help make it accessible on the internet.<
         </div>
 
     </div>
+
+    <script>
+        const ctx = document.getElementById("btcChart");
+
+        const chart = new Chart(ctx, {
+        type:"line",
+        data:{
+            labels:[],
+            datasets:[{
+            label:"BTC Price",
+            data:[],
+            borderColor:"#1869bb",
+            borderWidth:2,
+            tension:0.3,
+            fill:false
+            }]
+        },
+        options:{
+            responsive:true,
+            plugins:{
+            legend:{labels:{color:"white"}}
+            },
+            scales:{
+            x:{ticks:{color:"white"}},
+            y:{ticks:{color:"white"}}
+            }
+        }
+        });
+
+        async function loadChart(){
+        const res = await fetch(
+            "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=30"
+        );
+
+        const data = await res.json();
+
+        chart.data.labels = data.map(candle=>{
+            const d = new Date(candle[0]);
+            return d.getHours()+":"+
+                String(d.getMinutes()).padStart(2,"0");
+        });
+
+        chart.data.datasets[0].data = data.map(candle=>Number(candle[4]));
+        chart.update();
+
+        document.getElementById("price").textContent =
+            "$" + Number(data[data.length-1][4]).toLocaleString();
+        }
+
+        loadChart();
+        setInterval(loadChart,1000);
+    </script>
 
 </body>
 </html>
