@@ -7,9 +7,8 @@
     <link rel="icon" href="images/title_icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="bootstrap.min.css.js/bootstrap.css">
-    <script src="bootstrap.min.css.js/bootstrap.bundle.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <style>
 
         html {
@@ -136,10 +135,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5em;
             gap: 30px;
-            background-color: #4b97df;
-            background: linear-gradient(180deg,#fff, #4b97df);
+            overflow-x: auto;
+        }
+
+        .skills i{
+            font-size: 2.5em;
+        }
+
+        .skills nav{
+            text-align: center;
         }
 
         .services{
@@ -211,7 +216,7 @@
    768px - 991px
 ========================================= */
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 768px) and (max-width: 991px) {
 
     .foolting_i {
         display: none;
@@ -228,6 +233,7 @@
     #img1 {
         width: 30% !important;
         height: auto !important;
+        margin-top: 20px;
     }
 
     #mining_pc {
@@ -384,6 +390,7 @@
     #img1 {
         width: 50% !important;
         height: auto !important;
+        margin-top: 20px;
     }
 
     .section:first-child h2 {
@@ -541,8 +548,10 @@
         right: 0;
         margin-top: 20px;
         padding: 15px;
-        font-size: 2rem;
-        gap: 20px;
+        font-size: .7rem;
+        gap: 10px;
+        overflow:hidden;
+        overflow-x: auto;
     }
 
 
@@ -716,6 +725,7 @@
 
     #img1 {
         width: 60% !important;
+        margin-top: 20px;
     }
 
     .section:first-child h2 {
@@ -764,19 +774,19 @@
 </head>
 <body>
 
-    <div class="bg-dark.bg-gradient section" style="text-align: center; padding-top: 50px;">
+    <div class="bg-dark.bg-gradient section" style="text-align: center; padding-top: 50px;" data-aos="fade-right">
         <img id="img1" src="img1.jpg" class="rounded mx-auto d-block w-25 h-35 floating" alt="...">
         <br><br>
         <label for="" style="text-align: center;">
             <h2>Ko Moe Htet</h2>
-            <p class="fst-italic">"Knowing how to code isn't the goal. Building secure, useful, and reliable software is."</p>
+            <p class="fst-italic">“Knowing how to code isn't the goal. Building secure, useful, and reliable software is.”</p>
             <p class="fst-italic">“Building the digital world with code, while building my daily income through crypto.”</p>
         </label>
         <br>
         <div>
             <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Junior Frontend Developer</p>
             &
-            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Feature Treader,Crypto Mining</p>
+            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Feature Trader,Crypto Mining</p>
         </div>
         <a href="#2" style="margin-right: 50px;">About Me</a> <a href="#3">My Services</a>
         <!-- position absolute -->
@@ -787,10 +797,16 @@
             <ul class="dropdown-menu bg-dark" style="padding: 20px;">
                 <li><a href="https://coruscating-muffin-2682d4.netlify.app/" class="text-light"><i class="fa-solid fa-code"></i> My Team</a></li>
                 <br>
+                <li><a href="projects.html" class="text-light"><i class="fa-solid fa-globe"></i> My Projects</a></li>
+                <br>
                 <li><a href="https://www.t.me/MoeHtetr" class="text-light"><i class="fa-brands fa-telegram"></i>Telegram</a></li>
                 <br>
                 <li><a href="https://github.com/MoeHtet9" class="text-light"><i class="fa-brands fa-github"></i> GitHub</a></li>
             </ul>
+        </div>
+        <div class="form-check form-switch" style="position: absolute; top: 20px; right: 20px;">
+            <input class="form-check-input border-dark" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">MM</label>
         </div>
         <div class="foolting_i">
             <img title="PC Mining" id="mining_pc" src="images/mining_pc.png" alt="" width="200px" height="200px">
@@ -806,7 +822,7 @@
         
     </div>
 
-    <div class="section about-skills" id="2">
+    <div class="section about-skills" id="2" data-aos="fade-down">
 
         <div class="about-me">
 
@@ -818,11 +834,7 @@
                     </div>
                     <div class="card-body">
                         <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
-                        <p class="card-text">My goal is to become a Full Stack Web Developer & Deployer.
-
-I am continuously learning, building real-world projects, solving problems, and improving my skills every day.
-
-My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.</p>
+                        <p class="card-text">My goal is to become a Full Stack Web Developer & Deployer.I am continuously learning, building real-world projects, solving problems, and improving my skills every day.My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.</p>
                     </div>
                 </div>
                 
@@ -868,11 +880,38 @@ My goal is to build a career as a Freelance Web Developer & Deployer, creating u
                         </tr>
                     </tbody>
                 </table>
-                <div class="skills">
+                <div class="skills border border-1 border-dark rounded shadow">
 
-                    <i class="fa-brands fa-html5 shadow " style="color: orangered;"></i>    
-                    <i class="fa-brands fa-css3-alt shadow " style="color: #126abd;"></i>
-                    <i class="fa-brands fa-square-js shadow " style="color: rgb(255, 221, 0);"></i>
+                    <nav>
+                        <i class="fa-brands fa-html5 shadow " style="color: orangered;"></i>
+                        <br>
+                        <label for="html5">HTML5</label>
+                    </nav>
+                    <nav>
+                        <i class="fa-brands fa-css3-alt shadow " style="color: #126abd;"></i>
+                        <br>
+                        <label for="css3">CSS3</label>
+                    </nav>
+                    <nav>
+                        <i class="fa-brands fa-square-js shadow " style="color: rgb(255, 221, 0);"></i>
+                        <br>
+                        <label for="js">JavaScript</label>
+                    </nav>
+                    <nav>
+                        <i class="fa-brands fa-php shadow " style="color: #790d7a;"></i>
+                        <br>
+                        <label for="php">PHP</label>
+                    </nav>
+                    <nav>
+                        <i class="fa-brands fa-laravel shadow " style="color: #f05050;"></i>
+                        <br>
+                        <label for="laravel">Laravel</label>
+                    </nav>
+                    <nav>
+                        <i class="fa-solid fa-database shadow " style="color: #3a7f8e;"></i>
+                        <br>
+                        <label for="database">MySQL</label>
+                    </nav>
 
                 </div>
             </div>
@@ -881,7 +920,7 @@ My goal is to build a career as a Freelance Web Developer & Deployer, creating u
 
     </div>
 
-    <div class="section services" id="3">
+    <div class="section services" id="3" data-aos="fade-up">
 
         <div style="text-align: center;">
             <span>SERVICES</span>
@@ -912,7 +951,7 @@ My goal is to build a career as a Freelance Web Developer & Deployer, creating u
 
     </div>
 
-    <div class="section web-services" id="3/1">
+    <div class="section web-services" id="3/1" data-aos="fade-up">
 
         <h4><i class="fa-solid fa-laptop text-primary"></i> WEB DEVELOPMENT SERVICES</h4>
         <br>
@@ -958,7 +997,7 @@ I can deploy your frontend website and help make it accessible on the internet.<
 
     </div>
 
-    <div class="section crypto-services" id="3/2">
+    <div class="section crypto-services" id="3/2" data-aos="fade">
 
         <h4 style="text-align: center;"><i class="fa-brands fa-bitcoin text-success"></i> CRYPTO SERVICES</h4>
 
@@ -1028,7 +1067,14 @@ I can deploy your frontend website and help make it accessible on the internet.<
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="bootstrap.min.css.js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
+
+        ////////// BTC CHART ///////////
+
         const ctx = document.getElementById("btcChart");
 
         const chart = new Chart(ctx, {
@@ -1078,6 +1124,368 @@ I can deploy your frontend website and help make it accessible on the internet.<
 
         loadChart();
         setInterval(loadChart,1000);
+
+        // PAGE ANIMATION
+        AOS.init();
+
+        // Text Style //
+
+        const text = "Junior Frontend Developer";
+        const typing = document.getElementById("text_style");
+
+        let index = 0;
+
+        function typeEffect() {
+        if (index < text.length) {
+            typing.textContent += text[index];
+            index++;
+
+            setTimeout(typeEffect, 200);
+        };
+        };
+
+        typeEffect();
+
+        // Mouse Move //
+
+        const glow = document.createElement("div");
+
+        glow.className = "cursor-glow";
+
+        document.body.appendChild(glow);
+
+        document.addEventListener("mousemove", (e) => {
+
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+
+        });
+
+        ////////////// PAGE ANIMATE //////////////
+
+        const hiddenElements = document.querySelectorAll(".p");
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+        hiddenElements.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+        // =========================================
+        // LANGUAGE SWITCH - ENGLISH / MYANMAR
+        // =========================================
+
+        const languageSwitch = document.getElementById("switchCheckDefault");
+
+        const translations = {
+
+            // =========================
+            // HOME
+            // =========================
+
+            "“Knowing how to code isn't the goal. Building secure, useful, and reliable software is.”":
+                "Code ရေးတတ်ရုံက ရည်မှန်းချက်မဟုတ်ပါ။ လုံခြုံပြီး အသုံးဝင်ကာ ယုံကြည်စိတ်ချရတဲ့ Software တွေ တည်ဆောက်နိုင်ဖို့က ရည်မှန်းချက်ပါ။",
+
+            "“Building the digital world with code, while building my daily income through crypto.”":
+                "Code နဲ့ Digital World ကို တည်ဆောက်ရင်း Crypto နဲ့ နေ့စဉ်ဝင်ငွေကိုလည်း တည်ဆောက်နေပါတယ်။",
+
+            "Junior Frontend Developer":
+                "Junior Frontend Developer",
+
+            "Feature Treader,Crypto Mining":
+                "Feature Trader, Crypto Mining",
+
+            "About Me":
+                "ကျွန်တော့်အကြောင်း",
+
+            "My Services":
+                "ဝန်ဆောင်မှုများ",
+
+            "My Info":
+                "ကျွန်တော့်အချက်အလက်",
+
+            "My Team":
+                "ကျွန်တော့် Team",
+
+            // =========================
+            // ABOUT
+            // =========================
+
+            "About":
+                "ကျွန်တော့်အကြောင်း",
+
+            "My goal is to become a Full Stack Web Developer & Deployer.I am continuously learning, building real-world projects, solving problems, and improving my skills every day.My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.":
+                "ကျွန်တော့်ရည်မှန်းချက်က Full Stack Web Developer & Deployer တစ်ယောက်ဖြစ်လာဖို့ပါ။ ကျွန်တော်ဟာ နေ့တိုင်း ဆက်လက်လေ့လာနေပြီး လက်တွေ့အသုံးချနိုင်တဲ့ Project တွေတည်ဆောက်ခြင်း၊ ပြဿနာတွေဖြေရှင်းခြင်းနဲ့ ကိုယ့်ရဲ့ Skill တွေကို တိုးတက်အောင်လုပ်နေပါတယ်။အသုံးဝင်ပြီး ယုံကြည်စိတ်ချရတဲ့ Web Application တွေကို တည်ဆောက်ရင်း Technical Skill တွေကို ဆက်လက်တိုးတက်အောင်လုပ်ပြီး Freelance Web Developer & Deployer တစ်ယောက်အဖြစ် အသက်မွေးဝမ်းကြောင်းပြုနိုင်ဖို့ ရည်မှန်းထားပါတယ်။",
+
+            "Other Ventures":
+                "အခြားလုပ်ငန်းများ",
+
+            "₿ Crypto Trading":
+                "₿ Crypto Trading",
+
+            "Exploring market analysis, risk management, and disciplined trading strategies.":
+                "Market Analysis၊ Risk Management နဲ့ စနစ်တကျ Trading Strategy တွေကို လေ့လာနေပါတယ်။",
+
+            "⛏ Crypto Mining":
+                "⛏ Crypto Mining",
+
+            "Learning about mining infrastructure, hardware, energy efficiency, and blockchain networks.":
+                "Mining Infrastructure၊ Hardware၊ Energy Efficiency နဲ့ Blockchain Network တွေအကြောင်း လေ့လာနေပါတယ်။",
+
+            '"Learn. Build. Break. Fix. Apply. Level Up." 🚀':
+                '"လေ့လာပါ။ တည်ဆောက်ပါ။ ချို့ယွင်းပါစေ။ ပြင်ပါ။ လက်တွေ့အသုံးချပါ။ တိုးတက်ပါ။" 🚀',
+
+            "Basic Information":
+                "အခြေခံအချက်အလက်များ",
+
+            "AGE :":
+                "အသက် :",
+
+            "18 Years":
+                "၁၈ နှစ်",
+
+            "EMAIL :":
+                "အီးမေးလ် :",
+
+            "PHONE :":
+                "ဖုန်း :",
+
+            "NATIONALITY:":
+                "နိုင်ငံသား :",
+
+            "Myanmar":
+                "မြန်မာ",
+
+            // =========================
+            // SERVICES
+            // =========================
+
+            "SERVICES":
+                "ဝန်ဆောင်မှုများ",
+
+            "What Can I Help You With?":
+                "ဘာတွေကို ကူညီပေးနိုင်မလဲ?",
+
+            "Web Services":
+                "Web ဝန်ဆောင်မှုများ",
+
+            "Crypto Services":
+                "Crypto ဝန်ဆောင်မှုများ",
+
+            "I deploy your frontend website and make it accessible online.":
+                "သင့်ရဲ့ Frontend Website ကို Online ပေါ်တင်ပေးပြီး အသုံးပြုနိုင်အောင် ပြုလုပ်ပေးပါတယ်။",
+
+            "Frontend Deployment Deploy your existing website and make it live online.":
+                "ရှိပြီးသား Website ကို Online ပေါ်တင်ပေးပြီး Live ဖြစ်အောင် ပြုလုပ်ပေးပါတယ်။",
+
+            "Futures Trading Guidance Learn trading concepts, risk management & strategies.":
+                "Trading အခြေခံသဘောတရား၊ Risk Management နဲ့ Trading Strategy တွေကို လေ့လာနိုင်အောင် ကူညီပေးပါတယ်။",
+
+            "Solo Mining Hashrate Rental Rent hashrate for solo mining.":
+                "Solo Mining ပြုလုပ်ဖို့ Hashrate ငှားရမ်းနိုင်ပါတယ်။",
+
+            "Get Started":
+                "စတင်ရန်",
+
+            // =========================
+            // WEB SERVICES
+            // =========================
+
+            "WEB DEVELOPMENT SERVICES":
+                "WEB DEVELOPMENT ဝန်ဆောင်မှုများ",
+
+            "Frontend Development & Update":
+                "Frontend Development နှင့် Update",
+
+            "“Build. Improve. Update.”":
+                "“တည်ဆောက်ပါ။ တိုးတက်အောင်လုပ်ပါ။ Update လုပ်ပါ။”",
+
+            "Need a new website frontend?":
+                "Website အသစ်တစ်ခုရဲ့ Frontend လိုအပ်ပါသလား?",
+
+            "I can build modern, responsive and user-friendly interfaces from scratch.":
+                "ခေတ်မီပြီး Responsive ဖြစ်ကာ အသုံးပြုရလွယ်ကူတဲ့ Interface တွေကို အစကနေ တည်ဆောက်ပေးနိုင်ပါတယ်။",
+
+            "Already have a website? I can update, improve and maintain your existing frontend.":
+                "Website ရှိပြီးသားလား? ရှိပြီးသား Frontend ကို Update လုပ်ပေးခြင်း၊ ပိုကောင်းအောင်ပြင်ပေးခြင်းနဲ့ ထိန်းသိမ်းပေးခြင်းတွေ ပြုလုပ်နိုင်ပါတယ်။",
+
+            "I can help with:":
+                "အောက်ပါအရာများကို ကူညီပေးနိုင်ပါတယ်:",
+
+            "🌐 New Frontend Development":
+                "🌐 Frontend အသစ် တည်ဆောက်ခြင်း",
+
+            "📱 Responsive Design":
+                "📱 Responsive Design",
+
+            "🔧 Existing Website Updates":
+                "🔧 ရှိပြီးသား Website Update လုပ်ခြင်း",
+
+            "⚡ Basic Performance Improvements":
+                "⚡ Website Performance တိုးတက်အောင် ပြုလုပ်ခြင်း",
+
+            "Website Hosting":
+                "Website Hosting",
+
+            "“From Localhost to Live.”":
+                "“Localhost ကနေ Live အထိ”",
+
+            "Already have a website but don't know how to put it online?":
+                "Website ရှိပြီးသားပေမယ့် Online ပေါ် ဘယ်လိုတင်ရမလဲ မသိဘူးလား?",
+
+            "I can deploy your frontend website and help make it accessible on the internet.":
+                "သင့်ရဲ့ Frontend Website ကို Online ပေါ်တင်ပေးပြီး Internet ကနေ အသုံးပြုနိုင်အောင် ကူညီပေးနိုင်ပါတယ်။",
+
+            "🌍 Hosting Setup":
+                "🌍 Hosting Setup",
+
+            "🔗 Custom Domain Connection":
+                "🔗 Custom Domain ချိတ်ဆက်ခြင်း",
+
+            "🔒 HTTPS / SSL Setup":
+                "🔒 HTTPS / SSL Setup",
+
+            "📦 GitHub-based Deployment":
+                "📦 GitHub အခြေပြု Deployment",
+
+            // =========================
+            // CRYPTO
+            // =========================
+
+            "CRYPTO SERVICES":
+                "CRYPTO ဝန်ဆောင်မှုများ",
+
+            "Fast . Simple . Secure":
+                "မြန်ဆန် . ရိုးရှင်း . လုံခြုံ",
+
+            "USDT Bye & Sell":
+                "USDT ဝယ် / ရောင်း",
+
+            "Bye or Sell USDT with safe and convenient transactions.Fast process and trusted service.":
+                "USDT ကို လုံခြုံပြီး အဆင်ပြေတဲ့နည်းလမ်းနဲ့ ဝယ်ယူ၊ ရောင်းချနိုင်ပါတယ်။ မြန်ဆန်ပြီး ယုံကြည်စိတ်ချရတဲ့ ဝန်ဆောင်မှုဖြစ်ပါတယ်။",
+
+            " Solo Mining Coins":
+                " Solo Mining Coins",
+
+            "Future Treading":
+                "Future Trading",
+
+            "Treading Technology Sharing Telegram Channel :":
+                "Trading နည်းပညာများ မျှဝေပေးသော Telegram Channel :",
+
+            "Join":
+                "ဝင်ရန်",
+
+            "My Wallet Address":
+                "ကျွန်တော့် Wallet Address",
+
+            "Need My Services?":
+                "ကျွန်တော့်ဝန်ဆောင်မှု လိုအပ်ပါသလား?",
+
+            "Contact Me":
+                "ဆက်သွယ်ရန်",
+
+            "Loading...":
+                "တင်နေပါတယ်..."
+        };
+
+
+        // =========================================
+        // TEXT NODE တွေကို သိမ်းမယ်
+        // =========================================
+
+        const originalTexts = new Map();
+
+        function saveOriginalTexts() {
+
+            const walker = document.createTreeWalker(
+                document.body,
+                NodeFilter.SHOW_TEXT
+            );
+
+            let node;
+
+            while (node = walker.nextNode()) {
+
+                // script / style ထဲကစာ မယူ
+                if (
+                    node.parentElement.tagName === "SCRIPT" ||
+                    node.parentElement.tagName === "STYLE"
+                ) {
+                    continue;
+                }
+
+                const text = node.textContent.trim();
+
+                if (text !== "") {
+                    originalTexts.set(node, node.textContent);
+                }
+            }
+        }
+
+
+        // =========================================
+        // LANGUAGE CHANGE
+        // =========================================
+
+        function changeLanguage(isMyanmar) {
+
+            originalTexts.forEach((originalText, node) => {
+
+                const text = originalText.trim();
+
+                if (isMyanmar) {
+
+                    if (translations[text]) {
+
+                        const startSpace =
+                            originalText.match(/^\s*/)[0];
+
+                        const endSpace =
+                            originalText.match(/\s*$/)[0];
+
+                        node.textContent =
+                            startSpace +
+                            translations[text] +
+                            endSpace;
+                    }
+
+                } else {
+
+                    node.textContent = originalText;
+
+                }
+
+            });
+        }
+
+
+        // =========================================
+        // START
+        // =========================================
+
+        saveOriginalTexts();
+
+        languageSwitch.addEventListener("change", function () {
+
+            changeLanguage(this.checked);
+
+        });
+
     </script>
 
 </body>
