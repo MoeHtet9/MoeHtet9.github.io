@@ -1125,66 +1125,6 @@ I can deploy your frontend website and help make it accessible on the internet.<
         loadChart();
         setInterval(loadChart,1000);
 
-        // PAGE ANIMATION
-        AOS.init();
-
-        // Text Style //
-
-        const text = "Junior Frontend Developer";
-        const typing = document.getElementById("text_style");
-
-        let index = 0;
-
-        function typeEffect() {
-        if (index < text.length) {
-            typing.textContent += text[index];
-            index++;
-
-            setTimeout(typeEffect, 200);
-        };
-        };
-
-        typeEffect();
-
-        // Mouse Move //
-
-        const glow = document.createElement("div");
-
-        glow.className = "cursor-glow";
-
-        document.body.appendChild(glow);
-
-        document.addEventListener("mousemove", (e) => {
-
-            glow.style.left = e.clientX + "px";
-            glow.style.top = e.clientY + "px";
-
-        });
-
-        ////////////// PAGE ANIMATE //////////////
-
-        const hiddenElements = document.querySelectorAll(".p");
-
-        const observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        });
-
-        hiddenElements.forEach((element) => {
-
-            observer.observe(element);
-
-        });
-
         // =========================================
         // LANGUAGE SWITCH - ENGLISH / MYANMAR
         // =========================================
@@ -1473,7 +1413,6 @@ I can deploy your frontend website and help make it accessible on the internet.<
             });
         }
 
-
         // =========================================
         // START
         // =========================================
@@ -1483,6 +1422,66 @@ I can deploy your frontend website and help make it accessible on the internet.<
         languageSwitch.addEventListener("change", function () {
 
             changeLanguage(this.checked);
+
+        });
+
+        // PAGE ANIMATION
+        AOS.init();
+
+        // Text Style //
+
+        const text = "Junior Frontend Developer";
+        const typing = document.getElementById("text_style");
+
+        let index = 0;
+
+        function typeEffect() {
+        if (index < text.length) {
+            typing.textContent += text[index];
+            index++;
+
+            setTimeout(typeEffect, 200);
+        };
+        };
+
+        typeEffect();
+
+        // Mouse Move //
+
+        const glow = document.createElement("div");
+
+        glow.className = "cursor-glow";
+
+        document.body.appendChild(glow);
+
+        document.addEventListener("mousemove", (e) => {
+
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+
+        });
+
+        ////////////// PAGE ANIMATE //////////////
+
+        const hiddenElements = document.querySelectorAll(".p");
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+        hiddenElements.forEach((element) => {
+
+            observer.observe(element);
 
         });
 
