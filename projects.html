@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="icon" href="images/title_icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css.js/bootstrap.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 80px;
+            height: 50px;
+            background: 
+            radial-gradient(farthest-side,#0000 calc(100% - 15px),#ccc calc(100% - 14px) 99%,#0000) center/50px 100%, 
+            linear-gradient(#ccc 0 0) bottom/100% 14px;
+            background-repeat: no-repeat;
+            position: relative;
+            animation: l16-0 2s -0.5s infinite linear;
+        }
+        .loader:before {
+            content: "";
+            position: absolute;
+            inset: auto auto 2px 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #f03355;
+            transform-origin:50% -14px;
+            animation: l16-1 .5s infinite linear alternate;
+        }
+        @keyframes l16-0 { 
+            0%,49.99% {transform:scaleX(1)}
+            50%,100%  {transform:scaleX(-1)} 
+        }
+        @keyframes l16-1 {
+        0%   {transform:translate(0) rotate(0) }
+        50%  {transform:translate(34px) rotate(0) }
+        100% {transform:translate(34px) rotate(-180deg) }
+        }
+
+        .p-p{
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 80vh;
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+            .wave{
+                display: none;
+            }
+            .p-p{
+                height: 100vh;
+            }
+        }
+
+    </style>
+</head>
+<body data-aos="fade-left">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-5 shadow">
+        <div class="container-fluid">
+            <div class="loader"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button class="nav-link active" id="p_btn">Personal Projects</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link active" id="t_btn">Team Projects</button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wave" style="position: absolute; top: 20; right: 0; left: 0;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="1" d="M0,128L40,138.7C80,149,160,171,240,181.3C320,192,400,192,480,160C560,128,640,64,720,74.7C800,85,880,171,960,181.3C1040,192,1120,128,1200,122.7C1280,117,1360,171,1400,197.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#a2d9ff" fill-opacity="1" d="M0,128L40,138.7C80,149,160,171,240,181.3C320,192,400,192,480,160C560,128,640,64,720,74.7C800,85,880,171,960,181.3C1040,192,1120,128,1200,122.7C1280,117,1360,171,1400,197.3L1440,224L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
+    </div>
+
+    <!-- Personal Projects -->
+    <div class="container p_p" data-aos="fade-down">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h1>My Projects</h1>
+                <p>Welcome to projects page!</p>
+                <label class="text-secondary my-3" style="font-size:1.2em;">Using...</label>
+                <div class="card border border-2 border-dark" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.B7mk39tERmYkOlqlfhEh1QAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            HTML5
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.RAljz563XfZRJbMDHde3oAHaHa?r=0&pid=ImgDet&w=178&h=178&c=7&dpr=1.5&o=7&rm=3" alt="..." width="20px" height="20px">    
+                            CSS3
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.DlR3MGjm1AOnIYa6aHb6gAHaHa?r=0&w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            Bootstrap
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.VgcDbZtvRThnSNbJyvtTvQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            JavaScript
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.9CXWh_T1VMRdd627hDiXhgHaGQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            JQuery
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.REA_HuzmfIkqDGpnkdpa1AHaD_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            PHP
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.8SZ7jW_CAeWjsQDsM7GEBQHaKe?r=0&w=2000&h=2828&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="30px">
+                            MySQL
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-6 col-sm-12 p-p">
+                <div class="row">
+                    <div class="card m-1 col-lg-5 col-md-12">
+                        <a href="images/my_pj1.jpg" data-toggle="lightbox" data-gallery="images">
+                            <img src="images/my_pj1.jpg" class="img-fluid my-2">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Duration
+                                <span class="alert alert-success p-0 fw-light fs-6">2D</span>
+                            </h5>
+                            <p class="card-text">Htue Eain Thin was a legendary Myanmar singer-songwriter, known for his emotional songs and timeless influence on Myanmar music.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    <!-- Team Projects -->
+    <div class="container t_p">
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <h1>Team Projects</h1>
+                <p>I was involved in the frontend department.</p>
+                <label class="text-secondary my-3" style="font-size:1.2em;">Using...</label>
+                <div class="card border border-2 border-dark" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.B7mk39tERmYkOlqlfhEh1QAAAA?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            HTML5
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.RAljz563XfZRJbMDHde3oAHaHa?r=0&pid=ImgDet&w=178&h=178&c=7&dpr=1.5&o=7&rm=3" alt="..." width="20px" height="20px">    
+                            CSS3
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.DlR3MGjm1AOnIYa6aHb6gAHaHa?r=0&w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            Bootstrap
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse4.mm.bing.net/th/id/OIP.VgcDbZtvRThnSNbJyvtTvQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            JavaScript
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.9CXWh_T1VMRdd627hDiXhgHaGQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            JQuery
+                        </li>
+                        <!-- <li class="list-group-item">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.REA_HuzmfIkqDGpnkdpa1AHaD_?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="..." width="20px" height="20px">
+                            PHP
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-6 col-sm-12 t-t" style="overflow-y: auto; overflow-x: hidden; height: 80vh;">
+                <div class="row">
+                    <div class="card m-1 mx-3 col-lg-5 col-md-12">
+                        <a href="images/team_pj1.jpg" data-toggle="lightbox" data-gallery="images">
+                            <img src="images/team_pj1.jpg" class="img-fluid my-2">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Duration 
+                                <span class="alert alert-success p-0 fw-light fs-6">1M</span>
+                            </h5>
+                            <p class="card-text">Secure Message is a web application designed for secure message sharing. It allows users to encrypt messages with a password, send and store them safely, and easily manage both received and sent messages through a clean, user-friendly dashboard.</p>
+                        </div>
+                    </div>
+                    <div class="card m-1 mx-3 col-lg-5 col-md-12">
+                        <a href="images/team_pj2.jpg" data-toggle="lightbox" data-gallery="images">
+                            <img src="images/team_pj2.jpg" class="img-fluid my-2">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Duration
+                                <span class="alert alert-success p-0 fw-light fs-6">1M</span>
+                            </h5>
+                            <p class="card-text">Habit Tracker is a productivity web application designed to help users build consistent daily habits. It allows users to create custom schedules, track daily and weekly habits, monitor completion progress, view monthly statistics, and switch between Light and Pro modes through a clean, user-friendly dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+   
+    <script src="jQuery/jquery.min.js"></script>
+    <script src="bootstrap.min.css.js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <script>
+
+        $(document).ready(function(){
+
+            $('.t_p').hide();
+            $('.p_p').show();
+
+            $('#p_btn').click(function(){
+
+                $('.t_p').hide()
+                $('.p_p').show()
+
+            });
+
+            $('#t_btn').click(function(){
+
+                $('.p_p').hide()
+                $('.t_p').show()
+
+            });
+
+        });
+
+        ////////////////////////////////////////////
+
+        AOS.init();
+
+        // Text Style //
+
+        const text = "Junior Frontend Developer";
+        const typing = document.getElementById("text_style");
+
+        let index = 0;
+
+        function typeEffect() {
+        if (index < text.length) {
+            typing.textContent += text[index];
+            index++;
+
+            setTimeout(typeEffect, 200);
+        };
+        };
+
+        typeEffect();
+
+        // Mouse Move //
+
+        const glow = document.createElement("div");
+
+        glow.className = "cursor-glow";
+
+        document.body.appendChild(glow);
+
+        document.addEventListener("mousemove", (e) => {
+
+            glow.style.left = e.clientX + "px";
+            glow.style.top = e.clientY + "px";
+
+        });
+
+        // PAGE ANIMATION //
+
+        const hiddenElements = document.querySelectorAll(".p");
+
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+        hiddenElements.forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+    </script>
+
+</body>
+</html>
