@@ -3,1489 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KoMoeHtet</title>
-    <link rel="icon" href="images/title_icon.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="bootstrap.min.css.js/bootstrap.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <style>
-
-        html {
-            scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-        }
-
-        .section {
-            height: 100vh;
-            scroll-snap-align: start;
-        }
-
-        .info{
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-
-        .info ul li a{
-            text-decoration: none;
-        }
-
-        .info ul li a i{
-            margin-right: 5px;
-        }
-
-        #img1{
-            box-shadow: 0px 5px 20px rgb(0, 0, 0,.8);
-        }
-
-        #html{
-            position: absolute;
-            top: 160px;
-            left: 80px;
-            font-size: 2.4em;
-            color: orangered;
-        }
-
-        #css{
-            position: absolute;
-            top: 260px;
-            left: 230px;
-            font-size: 2.4em;
-            color: rgb(0, 102, 255);
-        }
-
-        #bootstrap{
-            position: absolute;
-            bottom:280px;
-            left: 80px;
-            font-size: 2.4em;
-            color: blueviolet;
-        }
-
-        #js{
-            position: absolute;
-            bottom: 180px;
-            left: 140px;
-            font-size: 2.4em;
-            color: rgb(174, 174, 3);
-        }
-
-        #mining_pc{
-            position: absolute;
-            top: 220px;
-            right: 100px;
-        }
-
-        #code{
-            position: absolute;
-            top: 120px;
-            left: 250px;
-            padding: 20px;
-            border-radius: 50%;
-            background-color: rgba(77, 193, 228, 0.3);
-            box-shadow: 0px 0px 20px #4fcfe5;
-        }
-
-        #bitcoin{
-            position: absolute;
-            top: 190px;
-            right: 300px;
-            font-size: 2em;
-            color: orange;
-        }
-
-        #ethereum{
-            position: absolute;
-            top: 100px;
-            right: 100px;
-            font-size: 2em;
-            color: darkgrey;
-        }
-
-        #monero{
-            position: absolute;
-            bottom: 100px;
-            right: 130px;
-            font-size: 2em;
-            color: orangered;
-        }
-
-        .about-skills{
-            display: grid;
-            grid-template-rows: 80% 20%;
-        }
-
-        .about-me{            
-            display: grid;
-            grid-template-columns: 50% 50%;
-            gap: 50px;
-            padding: 35px;
-            align-items: center;
-        }
-
-        .skills{
-            position: relative;
-            top: 100px;
-            right: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            overflow-x: auto;
-        }
-
-        .skills i{
-            font-size: 2.5em;
-        }
-
-        .skills nav{
-            text-align: center;
-        }
-
-        .services{
-            padding: 5px;
-        }
-
-        .web-services{
-            text-align: center;
-            padding: 20px;
-        }
-
-        .crypto-services{
-            padding-top: 20px;
-        }
-
-        .crypto-services .footer{
-            position: relative;
-            top: 40px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            border-radius: 90% 90% 0% 0%;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .text-shadow{
-            text-shadow: -3px 5px 5px rgb(0, 0, 0,.3);
-        }
-
-        /* ANIMATION */
-        .floating {
-        animation: float 3s ease-in-out infinite;
-        }
-
-        .floating2{
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-13px);
-        }
-        }
-
-        @keyframes float {
-        0%, 100% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-8px);
-        }
-        }
-
-        /* BITCOIN CHART */
-        canvas{
-            background:#111213;
-            padding:10px;
-        }
-
-        /* =========================================
-   TABLET RESPONSIVE
-   768px - 991px
-========================================= */
-
-@media (max-width: 768px) and (max-width: 991px) {
-
-    .foolting_i {
-        display: none;
-    }
-
-    .section {
-        height: auto;
-        min-height: 100vh;
-        scroll-snap-align: start;
-    }
-
-    /* HOME */
-
-    #img1 {
-        width: 30% !important;
-        height: auto !important;
-        margin-top: 20px;
-    }
-
-    #mining_pc {
-        width: 150px;
-        height: 150px;
-        right: 30px;
-        top: 250px;
-    }
-
-    #html {
-        left: 40px;
-        top: 180px;
-    }
-
-    #css {
-        left: 120px;
-        top: 300px;
-    }
-
-    #bootstrap {
-        left: 40px;
-        bottom: 180px;
-    }
-
-    #js {
-        left: 100px;
-        bottom: 100px;
-    }
-
-    #code {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    #bitcoin {
-        right: 180px;
-    }
-
-    #ethereum {
-        right: 40px;
-    }
-
-    #monero {
-        right: 50px;
-        bottom: 80px;
-    }
-
-
-    /* ABOUT */
-
-    .about-me {
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-        padding: 25px;
-    }
-
-    .about-me .card {
-        height: auto !important;
-    }
-
-    .skills {
-        top: 30px;
-        right: 0;
-        font-size: 2em;
-    }
-
-
-    /* SERVICES */
-
-    .services > .d-flex {
-        flex-wrap: wrap;
-        gap: 30px;
-        height: auto !important;
-        padding: 20px;
-    }
-
-    .services .card {
-        width: 18rem !important;
-    }
-
-
-    /* WEB SERVICES */
-
-    .web-services {
-        padding: 30px;
-        height: auto;
-    }
-
-    .web-services .row {
-        gap: 20px;
-    }
-
-
-    /* CRYPTO */
-
-    .crypto-services {
-        padding: 25px 15px;
-        height: auto;
-    }
-
-    .crypto-services > .card {
-        grid-template-columns: 1fr 1fr !important;
-        height: auto !important;
-    }
-
-    .crypto-services > .card > div:last-child {
-        grid-column: span 2;
-    }
-
-    .crypto-services .footer {
-        position: relative;
-        top: 30px;
-    }
-
-}
-
-
-/* =========================================
-   MOBILE RESPONSIVE
-   Under 767px
-========================================= */
-
-@media (max-width: 767px) {
-
-    .foolting_i {
-        display: none;
-    }
-
-    html {
-        scroll-snap-type: none;
-    }
-
-    body {
-        overflow-x: hidden;
-    }
-
-    .section {
-        height: auto;
-        min-height: 100vh;
-        scroll-snap-align: none;
-    }
-
-
-    /* =========================
-       HOME SECTION
-    ========================= */
-
-    .section:first-child {
-        padding: 30px 15px !important;
-        min-height: 100vh;
-        overflow: hidden;
-    }
-
-    #img1 {
-        width: 50% !important;
-        height: auto !important;
-        margin-top: 20px;
-    }
-
-    .section:first-child h2 {
-        font-size: 1.6rem;
-    }
-
-    .section:first-child p {
-        font-size: .9rem;
-    }
-
-    .section:first-child > div {
-        margin-bottom: 15px;
-    }
-
-
-    /* My Info */
-
-    .info {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-
-    .info button {
-        font-size: .8rem;
-    }
-
-
-    /* Home Navigation */
-
-    .section:first-child > a {
-        margin-right: 15px !important;
-        font-size: .9rem;
-    }
-
-
-    /* Floating icons */
-
-    #mining_pc {
-        width: 100px;
-        height: 100px;
-        right: 10px;
-        top: 330px;
-    }
-
-    #html {
-        left: 20px;
-        top: 300px;
-        font-size: 1.8em;
-    }
-
-    #css {
-        left: 70px;
-        top: 370px;
-        font-size: 1.8em;
-    }
-
-    #bootstrap {
-        left: 20px;
-        bottom: 100px;
-        font-size: 1.8em;
-    }
-
-    #js {
-        left: 70px;
-        bottom: 50px;
-        font-size: 1.8em;
-    }
-
-    #code {
-        top: 280px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.5em;
-        padding: 15px;
-    }
-
-    #bitcoin {
-        top: 350px;
-        right: 100px;
-        font-size: 1.5em;
-    }
-
-    #ethereum {
-        top: 300px;
-        right: 20px;
-        font-size: 1.5em;
-    }
-
-    #monero {
-        right: 30px;
-        bottom: 80px;
-        font-size: 1.5em;
-    }
-
-
-    /* =========================
-       ABOUT SECTION
-    ========================= */
-
-    .about-skills {
-        display: block;
-        min-height: 100vh;
-        padding: 20px 10px;
-    }
-
-    .about-me {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        padding: 10px;
-        align-items: stretch;
-    }
-
-    .about-me > div {
-        width: 100%;
-    }
-
-    .about-me .card {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .about-me .card-body {
-        padding: 15px;
-    }
-
-    .about-me .card-text {
-        font-size: .9rem;
-        line-height: 1.6;
-    }
-
-
-    /* Basic Information */
-
-    .about-me h3 {
-        font-size: 1.3rem;
-    }
-
-    .about-me table {
-        font-size: .85rem;
-    }
-
-    .about-me table th,
-    .about-me table td {
-        padding: 8px 5px;
-    }
-
-
-    /* Skills */
-
-    .skills {
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 20px;
-        padding: 15px;
-        font-size: .7rem;
-        gap: 10px;
-        overflow:hidden;
-        overflow-x: auto;
-    }
-
-
-    /* =========================
-       SERVICES SECTION
-    ========================= */
-
-    .services {
-        padding: 30px 15px;
-        min-height: 100vh;
-    }
-
-    .services > .d-flex {
-        flex-direction: column;
-        height: auto !important;
-        gap: 30px;
-        padding: 10px;
-    }
-
-    .services .card {
-        width: 100% !important;
-        max-width: 350px;
-    }
-
-    .services .card img {
-        height: 200px;
-        object-fit: cover;
-    }
-
-
-    /* =========================
-       WEB SERVICES
-    ========================= */
-
-    .web-services {
-        padding: 30px 15px;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .web-services .row {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .web-services .col-sm-6 {
-        width: 100%;
-    }
-
-    .web-services .card {
-        height: auto;
-    }
-
-    .web-services .card-body {
-        padding: 20px 15px;
-    }
-
-    .web-services .card-title {
-        font-size: 1.1rem;
-    }
-
-    .web-services .card-text {
-        font-size: .9rem;
-        line-height: 1.6;
-    }
-
-    .web-services .list-group-item {
-        font-size: .9rem;
-    }
-
-
-    /* =========================
-       CRYPTO SERVICES
-    ========================= */
-
-    .crypto-services {
-        padding: 30px 10px;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .crypto-services > .card {
-        display: flex !important;
-        flex-direction: column;
-        height: auto !important;
-        margin: 10px 0 !important;
-        padding: 10px;
-    }
-
-    .crypto-services > .card > div {
-        width: 100% !important;
-    }
-
-
-    /* BTC Chart */
-
-    .crypto-services canvas {
-        width: 100% !important;
-        height: 250px !important;
-    }
-
-    #price {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
-
-
-    /* USDT / Mining / Trading */
-
-    .crypto-services .row {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .crypto-services .col-sm-6 {
-        width: 100%;
-    }
-
-    .crypto-services .card {
-        width: 100% !important;
-    }
-
-
-    /* Wallet */
-
-    .crypto-services .m-3 {
-        margin: 15px !important;
-        word-break: break-all;
-    }
-
-    .crypto-services .m-3 p {
-        font-size: .75rem;
-    }
-
-
-    /* Footer */
-
-    .crypto-services .footer {
-        position: relative;
-        top: 20px;
-        width: 100%;
-    }
-
-    .crypto-services .footer > div {
-        height: auto !important;
-        padding: 20px 10px !important;
-    }
-
-    .crypto-services .footer h4 {
-        font-size: .9rem;
-    }
-
-    .crypto-services .footer h4 i {
-        display: none;
-    }
-
-}
-
-
-/* =========================================
-   VERY SMALL MOBILE
-   Under 400px
-========================================= */
-
-@media (max-width: 400px) {
-
-    .foolting_i {
-        display: none;
-    }
-
-    #img1 {
-        width: 60% !important;
-        margin-top: 20px;
-    }
-
-    .section:first-child h2 {
-        font-size: 1.4rem;
-    }
-
-    .section:first-child p {
-        font-size: .8rem;
-    }
-
-    #mining_pc {
-        width: 80px;
-        height: 80px;
-    }
-
-    #html,
-    #css,
-    #bootstrap,
-    #js {
-        font-size: 1.5em;
-    }
-
-    #bitcoin,
-    #ethereum,
-    #monero {
-        font-size: 1.2em;
-    }
-
-    .about-me {
-        padding: 5px;
-    }
-
-    .about-me .card-text {
-        font-size: .8rem;
-    }
-
-    .web-services .card-text,
-    .web-services .list-group-item {
-        font-size: .8rem;
-    }
-
-}
-
-    </style>
-
+    <meta name="theme-color" content="#050b18">
+    <meta name="description" content="NexDev — Laravel developer portfolio. Building powerful, scalable web applications.">
+    <title>KoMoeHtet | Web Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="bg-dark.bg-gradient section" style="text-align: center; padding-top: 50px;" data-aos="fade-right">
-        <img id="img1" src="img1.jpg" class="rounded mx-auto d-block w-25 h-35 floating" alt="...">
-        <br><br>
-        <label for="" style="text-align: center;">
-            <h2>Ko Moe Htet</h2>
-            <p class="fst-italic">“Knowing how to code isn't the goal. Building secure, useful, and reliable software is.”</p>
-            <p class="fst-italic">“Building the digital world with code, while building my daily income through crypto.”</p>
-        </label>
-        <br>
-        <div>
-            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Junior Frontend Developer</p>
-            &
-            <p class="badge text-bg-primary text-wrap" style="font-size: 1.2em;">Feature Trader,Crypto Mining</p>
-        </div>
-        <a href="#2" style="margin-right: 50px;">About Me</a> <a href="#3">My Services</a>
-        <!-- position absolute -->
-        <div class="btn-group dropend info">
-            <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                My Info
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="brand" href="#home">
+                <span class="brand-mark">M</span>
+                <span>Ko Moe Htet</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
             </button>
-            <ul class="dropdown-menu bg-dark" style="padding: 20px;">
-                <li><a href="https://coruscating-muffin-2682d4.netlify.app/" class="text-light"><i class="fa-solid fa-code"></i> My Team</a></li>
-                <br>
-                <li><a href="projects.html" class="text-light"><i class="fa-solid fa-globe"></i> My Projects</a></li>
-                <br>
-                <li><a href="https://www.t.me/MoeHtetr" class="text-light"><i class="fa-brands fa-telegram"></i>Telegram</a></li>
-                <br>
-                <li><a href="https://github.com/MoeHtet9" class="text-light"><i class="fa-brands fa-github"></i> GitHub</a></li>
-            </ul>
-        </div>
-        <div class="form-check form-switch" style="position: absolute; top: 20px; right: 20px;">
-            <input class="form-check-input border-dark" type="checkbox" role="switch" id="switchCheckDefault">
-            <label class="form-check-label" for="switchCheckDefault">MM</label>
-        </div>
-        <div class="foolting_i">
-            <img title="PC Mining" id="mining_pc" src="images/mining_pc.png" alt="" width="200px" height="200px">
-            <i title="HTML5" id="html" class="fa-brands fa-html5 text-shadow"></i>    
-            <i title="CSS" id="css" class="fa-brands fa-css3-alt text-shadow"></i>
-            <i title="Bootstrap" id="bootstrap" class="fa-brands fa-bootstrap text-shadow"></i>
-            <i title="JavaScript" id="js" class="fa-brands fa-square-js text-shadow"></i>
-            <h3 title="Coding" id="code"><i class="fa-solid fa-code" text-shadow></i></h3>
-            <i title="Bit Coin" id="bitcoin" class="fa-brands fa-bitcoin text-shadow"></i>
-            <i title="Ethereum" id="ethereum" class="fa-brands fa-ethereum text-shadow"></i>
-            <i title="Monero" id="monero" class="fa-brands fa-monero text-shadow"></i>
-        </div>
-        
-    </div>
-
-    <div class="section about-skills" id="2" data-aos="fade-down">
-
-        <div class="about-me">
-
-            <div>
-
-                <div class="card shadow mb-3 bg-body-tertiary " style="width: 100%;height: 200px;">
-                    <div class="card-header">
-                        <h5 class="card-title">About</h5>
-                    </div>
-                    <div class="card-body">
-                        <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
-                        <p class="card-text">My goal is to become a Full Stack Web Developer & Deployer.I am continuously learning, building real-world projects, solving problems, and improving my skills every day.My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.</p>
-                    </div>
-                </div>
-                
-                <div class="card text-center shadow bg-body-tertiary ">
-                    <div class="card-header">
-                        Other Ventures
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">₿ Crypto Trading</h5>
-                        <p class="card-text">Exploring market analysis, risk management, and disciplined trading strategies.</p>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">⛏ Crypto Mining</h5>
-                        <p class="card-text">Learning about mining infrastructure, hardware, energy efficiency, and blockchain networks.</p>
-                    </div>
-                    <h5 class="card-footer text-body-dark fst-italic">
-                        "Learn. Build. Break. Fix. Apply. Level Up." 🚀 <a href="#3" class="card-link">Services</a>
-                    </h5>
-                </div>
-
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a class="btn-main d-none d-lg-inline-flex" href="#contact">
+                    Hire Me <i class="fa-solid fa-paper-plane"></i>
+                </a>
             </div>
-
-            <div>
-                <h3>Basic Information</h3>
-                <br><br>
-                <table class="table table-borderless h-50">
-                    <tbody>
-                        <tr>
-                            <th>AGE :</th>
-                            <td>18 Years</td>
-                        </tr>
-                        <tr>
-                            <th>EMAIL :</th>
-                            <td>moehtet17112024@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th>PHONE :</th>
-                            <td>+959 792899718</td>
-                        </tr>
-                        <tr>
-                            <th>NATIONALITY:</th>
-                            <td>Myanmar</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="skills border border-1 border-dark rounded shadow">
-
-                    <nav>
-                        <i class="fa-brands fa-html5 shadow " style="color: orangered;"></i>
-                        <br>
-                        <label for="html5">HTML5</label>
-                    </nav>
-                    <nav>
-                        <i class="fa-brands fa-css3-alt shadow " style="color: #126abd;"></i>
-                        <br>
-                        <label for="css3">CSS3</label>
-                    </nav>
-                    <nav>
-                        <i class="fa-brands fa-square-js shadow " style="color: rgb(255, 221, 0);"></i>
-                        <br>
-                        <label for="js">JavaScript</label>
-                    </nav>
-                    <nav>
-                        <i class="fa-brands fa-php shadow " style="color: #790d7a;"></i>
-                        <br>
-                        <label for="php">PHP</label>
-                    </nav>
-                    <nav>
-                        <i class="fa-brands fa-laravel shadow " style="color: #f05050;"></i>
-                        <br>
-                        <label for="laravel">Laravel</label>
-                    </nav>
-                    <nav>
-                        <i class="fa-solid fa-database shadow " style="color: #3a7f8e;"></i>
-                        <br>
-                        <label for="database">MySQL</label>
-                    </nav>
-
-                </div>
-            </div>
-            
         </div>
+    </nav>
 
-    </div>
-
-    <div class="section services" id="3" data-aos="fade-up">
-
-        <div style="text-align: center;">
-            <span>SERVICES</span>
-            <h4 class="fst-italic">What Can I Help You With?</h4>
-        </div>
-        <br>
-        <div class="d-flex" style="justify-content: space-around; align-items: center; height: 80%;">
-            <div class="card shadow" style="width: 18rem;">
-                <img src="images/code.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Web Services</h5>
-                    <p class="card-text">I deploy your frontend website and make it accessible online.</p>
-                    <p class="card-text">Frontend Deployment Deploy your existing website and make it live online.</p>
-                    <a href="#3/1" class="btn btn-primary">Get Started</a>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-grid"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-copy">
+                    <span class="hello">Hello, I'm</span>
+                    <h1><span>Web</span> Developer</h1>
+                    <h2>Building Powerful Web Applications</h2>
+                    <p>I'm a passionate Laravel & Full-Stack Web Developer with hands-on experience in building modern, scalable and user-friendly web applications. Let's turn your idea into reality.</p>
+                    <div class="hero-actions">
+                        <a class="btn-main" href="#contact">Hire Me <i class="fa-solid fa-paper-plane"></i></a>
+                        <a class="btn-outline" href="#projects">View My Projects</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/MoeHtet9" aria-label="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <!-- <a href="#contact" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a> -->
+                        <a href="https://www.t.me/MoeHtetr" aria-label="Telegram" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                        <!-- <a href="#contact" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a> -->
+                    </div>
                 </div>
-            </div>
-
-            <div class="card shadow" style="width: 18rem;">
-                <img src="images/crypto_chart.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Crypto Services</h5>
-                    <p class="card-text">Futures Trading Guidance Learn trading concepts, risk management & strategies.</p>
-                    <p class="card-text">Solo Mining Hashrate Rental Rent hashrate for solo mining.</p>
-                    <a href="#3/2" class="btn btn-primary">Get Started</a>
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="portrait-halo"></div>
+                        <div class="tech-float tech-one">
+                            <i class="fa-brands fa-laravel" style="color:#ff5364"></i>
+                            <span>Laravel</span>
+                        </div>
+                        <div class="tech-float tech-two">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-float tech-three">
+                            <i class="fa-brands fa-php"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="tech-float tech-four">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Code</span>
+                        </div>
+                        <div class="tech-float tech-five">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <img src="porfile_images/komoehtet_img.jpg" class="portrait" alt="Developer portrait">
+                        <div class="hero-sign">
+                            Let's Build<br>Something Great!
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </header>
 
-    </div>
-
-    <div class="section web-services" id="3/1" data-aos="fade-up">
-
-        <h4><i class="fa-solid fa-laptop text-primary"></i> WEB DEVELOPMENT SERVICES</h4>
-        <br>
-        <div class="row">
-            <div class="col-sm-6 mb-3 mb-sm-0 shadow">
-                <div class="card">
-                <div class="card-body">
-                    <i class="fa-solid fa-pager text-primary" style="font-size: 5em;"></i>
-                    <h5 class="card-title">Frontend Development & Update</h5>
-                    <p class="card-text fst-italic">“Build. Improve. Update.”</p>
-                    <p class="card-text text-primary">Need a new website frontend?
-I can build modern, responsive and user-friendly interfaces from scratch.
-Already have a website? I can update, improve and maintain your existing frontend.</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">I can help with:</li>
-                        <li class="list-group-item">🌐 New Frontend Development</li>
-                        <li class="list-group-item">📱 Responsive Design</li>
-                        <li class="list-group-item">🔧 Existing Website Updates</li>
-                        <li class="list-group-item">⚡ Basic Performance Improvements</li>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-4 reveal">
+                    <div class="section-kicker">&raquo; About Me</div>
+                    <h2 class="section-title">About <span class="text-blue">Me</span></h2>
+                    <p class="section-sub mb-3">A little introduction about me.</p>
+                    <p style="font-size: 11px; line-height: 1.9; color: var(--muted);">
+                        I'm a Web developer with a strong passion for building web applications that solve real problems. I enjoy working with modern technologies and always strive to write clean, maintainable code.
+                    </p>
+                    <ul class="about-list">
+                        <li><i class="fa-regular fa-circle-check"></i> 6+ Months Experience</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Freelance &amp; Remote Work</li>
+                        <li><i class="fa-regular fa-circle-check"></i> Always Learning New Technologies</li>
                     </ul>
                 </div>
+                <div class="col-lg-4 reveal">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" class="about-photo" alt="Developer workspace">
                 </div>
-            </div>
-            <div class="col-sm-6 shadow">
-                <div class="card">
-                <div class="card-body">
-                    <i class="fa-solid fa-cloud-arrow-up text-primary" style="font-size: 5em;"></i>
-                    <h5 class="card-title">Website Hosting</h5>
-                    <p class="card-text fst-italic">“From Localhost to Live.”</p>
-                    <p class="card-text text-primary">Already have a website but don't know how to put it online?
-I can deploy your frontend website and help make it accessible on the internet.</p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">I can help with:</li>
-                        <li class="list-group-item">🌍 Hosting Setup</li>
-                        <li class="list-group-item">🔗 Custom Domain Connection</li>
-                        <li class="list-group-item">🔒 HTTPS / SSL Setup</li>
-                        <li class="list-group-item">📦 GitHub-based Deployment</li>
-                    </ul>
-                </div>
+                <div class="col-lg-4 reveal">
+                    <div class="about-panel">
+                        <h3>My Development Philosophy</h3>
+                        <h3 class="text-blue" style="font-size: 16px; line-height: 1.5;">&ldquo;Clean code, smart solutions, long-term value.&rdquo;</h3>
+                        <p>I believe in building web applications that are not only functional but also scalable, secure and easy to maintain.</p>
+                        <div class="signature">NexDev</div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="section crypto-services" id="3/2" data-aos="fade">
-
-        <h4 style="text-align: center;"><i class="fa-brands fa-bitcoin text-success"></i> CRYPTO SERVICES</h4>
-
-        <div class="card border-success m-3 shadow" style="max-width: 100%; height: 65%;display: grid; grid-template-columns: 24% 50% 25%; align-items: center;">
-            <div style="width: 100%; height: 100%; overflow: hidden; padding: 10px; text-align: center;">
-                <div class="card">
-                    <h5>Bitcoin (BTC/USDT)</h5>
-
-                    <div class="price text-warning bg-dark" id="price">Loading...</div>
-
-                    <canvas id="btcChart"></canvas>
-                </div>
-                <i class="fa-solid fa-hand-holding-dollar text-success my-3" style="font-size: 5em;"></i>
-                <br>
-                <h5 class="text-success fst-italic" style="text-align: center;">Fast . Simple . Secure</h5>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-kicker">&raquo; My Skills</div>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-sub">These are the technologies and tools I work with.</p>
             </div>
-            <div>
-            <div class="card" style="width: 100%;">
-                <div class="card-body">
-                    <h5 class="card-title text-success">USDT Bye & Sell</h5>
-                    <p class="card-text">Bye or Sell USDT with safe and convenient transactions.Fast process and trusted service.</p>
+            <div class="row g-3">
+                <div class="col-md-6 reveal">
+                    <div class="skill-box">
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-laravel" style="color:#ff5364"></i>
+                                <strong>Laravel</strong>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-php"></i>
+                                <strong>PHP</strong>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-solid fa-database"></i>
+                                <strong>MySQL</strong>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-html5" style="color:#ff7043"></i>
+                                <strong>HTML</strong>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="95%"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <div class="card-body">
-                            <h5 class="card-title text-success"> Solo Mining Coins</h5>
-                            <div class="card" style="width: 18rem;">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">BTC</li>
-                                    <li class="list-group-item">ETC</li>
-                                    <li class="list-group-item">MONERO</li>
-                                </ul>
+                <div class="col-md-6 reveal">
+                    <div class="skill-box">
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <strong>CSS</strong>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-bootstrap" style="color:#a78bfa"></i>
+                                <strong>Bootstrap</strong>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-brands fa-js" style="color:#f7d51d"></i>
+                                <strong>JavaScript</strong>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="75%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-head">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                <strong>jQuery</strong>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4 reveal">
+                <div>
+                    <div class="section-kicker">&raquo; Featured Projects</div>
+                    <h2 class="section-title mb-1">My Recent Projects</h2>
+                    <p class="section-sub mb-0">Here are some of the projects I have developed.</p>
+                </div>
+                <a class="btn-outline d-none d-sm-inline-flex" href="#contact">
+                    View All Projects <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row g-3">
+                <!-- <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce dashboard">
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Commerce Management System</h3>
+                            <p>Complete online shopping and product management platform.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">jQuery</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card-body">
-                            <h5 class="card-title text-success"><i class="fa-solid fa-money-bill-trend-up"></i> Future Treading</h5>
-                            <p class="card-text">Treading Technology Sharing Telegram Channel : <a href="https://t.me/cryptomatemyanmar">Join</a></p>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=800&q=80" alt="Food ordering website">
                         </div>
+                        <div class="project-content">
+                            <h3>Food Ordering Web Application</h3>
+                            <p>Online food ordering with menu, cart and order tracking.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">jQuery</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80" alt="School management">
+                        </div>
+                        <div class="project-content">
+                            <h3>School Management System</h3>
+                            <p>Manage students, teachers, classes and school records.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Inventory dashboard">
+                        </div>
+                        <div class="project-content">
+                            <h3>Inventory Management System</h3>
+                            <p>Track stock, suppliers, purchases and sales in one place.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Bootstrap</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Investment dashboard">
+                        </div>
+                        <div class="project-content">
+                            <h3>Investment Management System</h3>
+                            <p>Investment tracking, portfolio summaries and reports.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">Chart UI</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Custom web application">
+                        </div>
+                        <div class="project-content">
+                            <h3>Custom Web Application</h3>
+                            <p>A tailored business workflow and data management app.</p>
+                            <div class="tags">
+                                <span class="tag">Laravel</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">jQuery</span>
+                            </div>
+                            <div class="project-actions">
+                                <a class="btn-main" href="#contact">Live Demo</a>
+                                <a class="btn-outline" href="#contact"><i class="fa-brands fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </article>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-kicker">&raquo; My Services</div>
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-sub">I provide high-quality web development services to help your business grow.</p>
+            </div>
+            <div class="row g-3">
+                <div class="col-6 col-lg">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Custom Laravel Web Development</h3>
+                        <p>Build powerful and scalable web applications.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3>E-Commerce Development</h3>
+                        <p>Create complete online shopping platforms.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Admin Dashboard Development</h3>
+                        <p>Modern and user-friendly admin panels.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3>Database Design &amp; Management</h3>
+                        <p>Organized database structure for better performance.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg">
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h3>Website Maintenance</h3>
+                        <p>Keep your website secure, fast and up to date.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="reveal">
+                <div class="section-kicker">&raquo; Working Process</div>
+                <h2 class="section-title">How I Work</h2>
+                <p class="section-sub">A simple and effective process to get your project done.</p>
             </div>
-            <div class="m-3">
-                <h4>My Wallet Address</h4>
-                <br>
-                <span class="badge text-bg-warning">BNB Smart Chain (BEP20)</span>
-                <p>0xd10d8c94606733c6a7831b0dacd008476b016a85</p>
-                <span class="badge text-bg-danger">Tron (TRC20)</span>
-                <p>THxm7TtUbH1Xj6B8BuEEibmattkqDSCcYp</p>
-                <span class="badge text-bg-primary">The Open Network (TON)</span>
-                <p>UQB-aC7pGjllWLXvbdByNkrNuqzfg-bqDzKMqG9ahb8nUcRP</p>
+            <div class="row g-3 align-items-stretch">
+                <div class="col-6 col-md">
+                    <div class="process-card reveal">
+                        <div class="process-num">1</div>
+                        <h3>Discuss</h3>
+                        <p>Understand your needs and requirements.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="process-card reveal">
+                        <div class="process-num">2</div>
+                        <h3>Planning</h3>
+                        <p>Create project structure and timeline.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="process-card reveal">
+                        <div class="process-num">3</div>
+                        <h3>Development</h3>
+                        <p>Build your project with clean code.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="process-card reveal">
+                        <div class="process-num">4</div>
+                        <h3>Testing</h3>
+                        <p>Check bugs and ensure quality.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="process-card reveal">
+                        <div class="process-num">5</div>
+                        <h3>Delivery</h3>
+                        <p>Deploy and hand over your project.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 ms-auto reveal">
+                    <div class="success-card">
+                        <h3>Your Idea<br>My Code</h3>
+                        <h3 style="font-size: 17px; color: white;">Our Success</h3>
+                        <p>Let's build something amazing together!</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <div class="text-bg-secondary p-3 fst-italic" style="height: 80px;">
-                <h4>
-                    <i class="fa-solid fa-server" style="margin-right: 150px; font-size: 1.3em;"></i>
-                    Need My Services?
-                    <a href="https://www.t.me/MoeHtetr" class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="font-size: .7em;">Contact Me  <i class="fa-solid fa-paper-plane"></i></a>
-                    <i class="fa-solid fa-money-check-dollar" style="margin-left: 150px; font-size: 1.3em;"></i>
-                </h4>                
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-card reveal">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5">
+                        <div class="section-kicker">&raquo; Let's Work Together</div>
+                        <h2>Have a project<br><span class="text-blue">in mind?</span></h2>
+                        <p>Tell me about your idea. Let's turn it into a powerful web application.</p>
+                        <div class="contact-item">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>moehtet17112024@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-brands fa-telegram"></i>
+                            <span>Telegram &middot; @moehtetr</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Available for remote work</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Project Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="4" placeholder="Tell me about your project..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-main">
+                                        Send Message <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                    <small id="formMessage" class="d-block mt-2" style="color: #49c5ff; font-size: 10px;"></small>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="bootstrap.min.css.js/bootstrap.bundle.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <script>
-
-        ////////// BTC CHART ///////////
-
-        const ctx = document.getElementById("btcChart");
-
-        const chart = new Chart(ctx, {
-        type:"line",
-        data:{
-            labels:[],
-            datasets:[{
-            label:"BTC Price",
-            data:[],
-            borderColor:"#1869bb",
-            borderWidth:2,
-            tension:0.3,
-            fill:false
-            }]
-        },
-        options:{
-            responsive:true,
-            plugins:{
-            legend:{labels:{color:"white"}}
-            },
-            scales:{
-            x:{ticks:{color:"white"}},
-            y:{ticks:{color:"white"}}
-            }
-        }
-        });
-
-        async function loadChart(){
-        const res = await fetch(
-            "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=30"
-        );
-
-        const data = await res.json();
-
-        chart.data.labels = data.map(candle=>{
-            const d = new Date(candle[0]);
-            return d.getHours()+":"+
-                String(d.getMinutes()).padStart(2,"0");
-        });
-
-        chart.data.datasets[0].data = data.map(candle=>Number(candle[4]));
-        chart.update();
-
-        document.getElementById("price").textContent =
-            "$" + Number(data[data.length-1][4]).toLocaleString();
-        }
-
-        loadChart();
-        setInterval(loadChart,1000);
-
-        // =========================================
-        // LANGUAGE SWITCH - ENGLISH / MYANMAR
-        // =========================================
-
-        const languageSwitch = document.getElementById("switchCheckDefault");
-
-        const translations = {
-
-            // =========================
-            // HOME
-            // =========================
-
-            "“Knowing how to code isn't the goal. Building secure, useful, and reliable software is.”":
-                "Code ရေးတတ်ရုံက ရည်မှန်းချက်မဟုတ်ပါ။ လုံခြုံပြီး အသုံးဝင်ကာ ယုံကြည်စိတ်ချရတဲ့ Software တွေ တည်ဆောက်နိုင်ဖို့က ရည်မှန်းချက်ပါ။",
-
-            "“Building the digital world with code, while building my daily income through crypto.”":
-                "Code နဲ့ Digital World ကို တည်ဆောက်ရင်း Crypto နဲ့ နေ့စဉ်ဝင်ငွေကိုလည်း တည်ဆောက်နေပါတယ်။",
-
-            "Junior Frontend Developer":
-                "Junior Frontend Developer",
-
-            "Feature Treader,Crypto Mining":
-                "Feature Trader, Crypto Mining",
-
-            "About Me":
-                "ကျွန်တော့်အကြောင်း",
-
-            "My Services":
-                "ဝန်ဆောင်မှုများ",
-
-            "My Info":
-                "ကျွန်တော့်အချက်အလက်",
-
-            "My Team":
-                "ကျွန်တော့် Team",
-
-            // =========================
-            // ABOUT
-            // =========================
-
-            "About":
-                "ကျွန်တော့်အကြောင်း",
-
-            "My goal is to become a Full Stack Web Developer & Deployer.I am continuously learning, building real-world projects, solving problems, and improving my skills every day.My goal is to build a career as a Freelance Web Developer & Deployer, creating useful and reliable web applications while continuously expanding my technical skills.":
-                "ကျွန်တော့်ရည်မှန်းချက်က Full Stack Web Developer & Deployer တစ်ယောက်ဖြစ်လာဖို့ပါ။ ကျွန်တော်ဟာ နေ့တိုင်း ဆက်လက်လေ့လာနေပြီး လက်တွေ့အသုံးချနိုင်တဲ့ Project တွေတည်ဆောက်ခြင်း၊ ပြဿနာတွေဖြေရှင်းခြင်းနဲ့ ကိုယ့်ရဲ့ Skill တွေကို တိုးတက်အောင်လုပ်နေပါတယ်။အသုံးဝင်ပြီး ယုံကြည်စိတ်ချရတဲ့ Web Application တွေကို တည်ဆောက်ရင်း Technical Skill တွေကို ဆက်လက်တိုးတက်အောင်လုပ်ပြီး Freelance Web Developer & Deployer တစ်ယောက်အဖြစ် အသက်မွေးဝမ်းကြောင်းပြုနိုင်ဖို့ ရည်မှန်းထားပါတယ်။",
-
-            "Other Ventures":
-                "အခြားလုပ်ငန်းများ",
-
-            "₿ Crypto Trading":
-                "₿ Crypto Trading",
-
-            "Exploring market analysis, risk management, and disciplined trading strategies.":
-                "Market Analysis၊ Risk Management နဲ့ စနစ်တကျ Trading Strategy တွေကို လေ့လာနေပါတယ်။",
-
-            "⛏ Crypto Mining":
-                "⛏ Crypto Mining",
-
-            "Learning about mining infrastructure, hardware, energy efficiency, and blockchain networks.":
-                "Mining Infrastructure၊ Hardware၊ Energy Efficiency နဲ့ Blockchain Network တွေအကြောင်း လေ့လာနေပါတယ်။",
-
-            '"Learn. Build. Break. Fix. Apply. Level Up." 🚀':
-                '"လေ့လာပါ။ တည်ဆောက်ပါ။ ချို့ယွင်းပါစေ။ ပြင်ပါ။ လက်တွေ့အသုံးချပါ။ တိုးတက်ပါ။" 🚀',
-
-            "Basic Information":
-                "အခြေခံအချက်အလက်များ",
-
-            "AGE :":
-                "အသက် :",
-
-            "18 Years":
-                "၁၈ နှစ်",
-
-            "EMAIL :":
-                "အီးမေးလ် :",
-
-            "PHONE :":
-                "ဖုန်း :",
-
-            "NATIONALITY:":
-                "နိုင်ငံသား :",
-
-            "Myanmar":
-                "မြန်မာ",
-
-            // =========================
-            // SERVICES
-            // =========================
-
-            "SERVICES":
-                "ဝန်ဆောင်မှုများ",
-
-            "What Can I Help You With?":
-                "ဘာတွေကို ကူညီပေးနိုင်မလဲ?",
-
-            "Web Services":
-                "Web ဝန်ဆောင်မှုများ",
-
-            "Crypto Services":
-                "Crypto ဝန်ဆောင်မှုများ",
-
-            "I deploy your frontend website and make it accessible online.":
-                "သင့်ရဲ့ Frontend Website ကို Online ပေါ်တင်ပေးပြီး အသုံးပြုနိုင်အောင် ပြုလုပ်ပေးပါတယ်။",
-
-            "Frontend Deployment Deploy your existing website and make it live online.":
-                "ရှိပြီးသား Website ကို Online ပေါ်တင်ပေးပြီး Live ဖြစ်အောင် ပြုလုပ်ပေးပါတယ်။",
-
-            "Futures Trading Guidance Learn trading concepts, risk management & strategies.":
-                "Trading အခြေခံသဘောတရား၊ Risk Management နဲ့ Trading Strategy တွေကို လေ့လာနိုင်အောင် ကူညီပေးပါတယ်။",
-
-            "Solo Mining Hashrate Rental Rent hashrate for solo mining.":
-                "Solo Mining ပြုလုပ်ဖို့ Hashrate ငှားရမ်းနိုင်ပါတယ်။",
-
-            "Get Started":
-                "စတင်ရန်",
-
-            // =========================
-            // WEB SERVICES
-            // =========================
-
-            "WEB DEVELOPMENT SERVICES":
-                "WEB DEVELOPMENT ဝန်ဆောင်မှုများ",
-
-            "Frontend Development & Update":
-                "Frontend Development နှင့် Update",
-
-            "“Build. Improve. Update.”":
-                "“တည်ဆောက်ပါ။ တိုးတက်အောင်လုပ်ပါ။ Update လုပ်ပါ။”",
-
-            "Need a new website frontend?":
-                "Website အသစ်တစ်ခုရဲ့ Frontend လိုအပ်ပါသလား?",
-
-            "I can build modern, responsive and user-friendly interfaces from scratch.":
-                "ခေတ်မီပြီး Responsive ဖြစ်ကာ အသုံးပြုရလွယ်ကူတဲ့ Interface တွေကို အစကနေ တည်ဆောက်ပေးနိုင်ပါတယ်။",
-
-            "Already have a website? I can update, improve and maintain your existing frontend.":
-                "Website ရှိပြီးသားလား? ရှိပြီးသား Frontend ကို Update လုပ်ပေးခြင်း၊ ပိုကောင်းအောင်ပြင်ပေးခြင်းနဲ့ ထိန်းသိမ်းပေးခြင်းတွေ ပြုလုပ်နိုင်ပါတယ်။",
-
-            "I can help with:":
-                "အောက်ပါအရာများကို ကူညီပေးနိုင်ပါတယ်:",
-
-            "🌐 New Frontend Development":
-                "🌐 Frontend အသစ် တည်ဆောက်ခြင်း",
-
-            "📱 Responsive Design":
-                "📱 Responsive Design",
-
-            "🔧 Existing Website Updates":
-                "🔧 ရှိပြီးသား Website Update လုပ်ခြင်း",
-
-            "⚡ Basic Performance Improvements":
-                "⚡ Website Performance တိုးတက်အောင် ပြုလုပ်ခြင်း",
-
-            "Website Hosting":
-                "Website Hosting",
-
-            "“From Localhost to Live.”":
-                "“Localhost ကနေ Live အထိ”",
-
-            "Already have a website but don't know how to put it online?":
-                "Website ရှိပြီးသားပေမယ့် Online ပေါ် ဘယ်လိုတင်ရမလဲ မသိဘူးလား?",
-
-            "I can deploy your frontend website and help make it accessible on the internet.":
-                "သင့်ရဲ့ Frontend Website ကို Online ပေါ်တင်ပေးပြီး Internet ကနေ အသုံးပြုနိုင်အောင် ကူညီပေးနိုင်ပါတယ်။",
-
-            "🌍 Hosting Setup":
-                "🌍 Hosting Setup",
-
-            "🔗 Custom Domain Connection":
-                "🔗 Custom Domain ချိတ်ဆက်ခြင်း",
-
-            "🔒 HTTPS / SSL Setup":
-                "🔒 HTTPS / SSL Setup",
-
-            "📦 GitHub-based Deployment":
-                "📦 GitHub အခြေပြု Deployment",
-
-            // =========================
-            // CRYPTO
-            // =========================
-
-            "CRYPTO SERVICES":
-                "CRYPTO ဝန်ဆောင်မှုများ",
-
-            "Fast . Simple . Secure":
-                "မြန်ဆန် . ရိုးရှင်း . လုံခြုံ",
-
-            "USDT Bye & Sell":
-                "USDT ဝယ် / ရောင်း",
-
-            "Bye or Sell USDT with safe and convenient transactions.Fast process and trusted service.":
-                "USDT ကို လုံခြုံပြီး အဆင်ပြေတဲ့နည်းလမ်းနဲ့ ဝယ်ယူ၊ ရောင်းချနိုင်ပါတယ်။ မြန်ဆန်ပြီး ယုံကြည်စိတ်ချရတဲ့ ဝန်ဆောင်မှုဖြစ်ပါတယ်။",
-
-            " Solo Mining Coins":
-                " Solo Mining Coins",
-
-            "Future Treading":
-                "Future Trading",
-
-            "Treading Technology Sharing Telegram Channel :":
-                "Trading နည်းပညာများ မျှဝေပေးသော Telegram Channel :",
-
-            "Join":
-                "ဝင်ရန်",
-
-            "My Wallet Address":
-                "ကျွန်တော့် Wallet Address",
-
-            "Need My Services?":
-                "ကျွန်တော့်ဝန်ဆောင်မှု လိုအပ်ပါသလား?",
-
-            "Contact Me":
-                "ဆက်သွယ်ရန်",
-
-            "Loading...":
-                "တင်နေပါတယ်..."
-        };
-
-
-        // =========================================
-        // TEXT NODE တွေကို သိမ်းမယ်
-        // =========================================
-
-        const originalTexts = new Map();
-
-        function saveOriginalTexts() {
-
-            const walker = document.createTreeWalker(
-                document.body,
-                NodeFilter.SHOW_TEXT
-            );
-
-            let node;
-
-            while (node = walker.nextNode()) {
-
-                // script / style ထဲကစာ မယူ
-                if (
-                    node.parentElement.tagName === "SCRIPT" ||
-                    node.parentElement.tagName === "STYLE"
-                ) {
-                    continue;
-                }
-
-                const text = node.textContent.trim();
-
-                if (text !== "") {
-                    originalTexts.set(node, node.textContent);
-                }
-            }
-        }
-
-
-        // =========================================
-        // LANGUAGE CHANGE
-        // =========================================
-
-        function changeLanguage(isMyanmar) {
-
-            originalTexts.forEach((originalText, node) => {
-
-                const text = originalText.trim();
-
-                if (isMyanmar) {
-
-                    if (translations[text]) {
-
-                        const startSpace =
-                            originalText.match(/^\s*/)[0];
-
-                        const endSpace =
-                            originalText.match(/\s*$/)[0];
-
-                        node.textContent =
-                            startSpace +
-                            translations[text] +
-                            endSpace;
-                    }
-
-                } else {
-
-                    node.textContent = originalText;
-
-                }
-
-            });
-        }
-
-        // =========================================
-        // START
-        // =========================================
-
-        saveOriginalTexts();
-
-        languageSwitch.addEventListener("change", function () {
-
-            changeLanguage(this.checked);
-
-        });
-
-        // PAGE ANIMATION
-        AOS.init();
-
-        // Text Style //
-
-        const text = "Junior Frontend Developer";
-        const typing = document.getElementById("text_style");
-
-        let index = 0;
-
-        function typeEffect() {
-        if (index < text.length) {
-            typing.textContent += text[index];
-            index++;
-
-            setTimeout(typeEffect, 200);
-        };
-        };
-
-        typeEffect();
-
-        // Mouse Move //
-
-        const glow = document.createElement("div");
-
-        glow.className = "cursor-glow";
-
-        document.body.appendChild(glow);
-
-        document.addEventListener("mousemove", (e) => {
-
-            glow.style.left = e.clientX + "px";
-            glow.style.top = e.clientY + "px";
-
-        });
-
-        ////////////// PAGE ANIMATE //////////////
-
-        const hiddenElements = document.querySelectorAll(".p");
-
-        const observer = new IntersectionObserver((entries) => {
-
-            entries.forEach((entry) => {
-
-                if(entry.isIntersecting){
-
-                    entry.target.classList.add("show");
-
-                }
-
-            });
-
-        });
-
-        hiddenElements.forEach((element) => {
-
-            observer.observe(element);
-
-        });
-
-    </script>
-
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <span>&copy; <span id="year"></span> KO MOE HTET.</span>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
