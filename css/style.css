@@ -148,9 +148,9 @@ a {
   transform:translateY(-3px)
 }
 /* Hero */
-    .hero {
+.hero {
   min-height:570px;
-  padding:125px 0 64px;
+  padding:0px 0 64px;
   display:flex;
   align-items:center;
   position:relative;
@@ -754,10 +754,10 @@ a {
 }
 @media(max-width:991px) {
   .hero {
-    padding-top:115px;
     min-height:540px
   }
   .hero-visual {
+    padding-top: 50px;
     height:340px
   }
   .portrait {
@@ -792,12 +792,12 @@ a {
     display:none
   }
 }
-@media(max-width:767px) {
+@media(max-width:768px) {
   .section {
     padding:58px 0
   }
   .hero {
-    padding:112px 0 38px;
+    padding:40px 0 38px;
     min-height:0
   }
   .hero .row {
