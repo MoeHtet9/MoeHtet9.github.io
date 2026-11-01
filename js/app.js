@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
   const $window = $(window);
   const $navbar = $('#mainNav');
   const $backToTop = $('.back-top');
@@ -64,4 +64,48 @@ $(function () {
     );
     this.reset();
   });
+
+  /* ==============================
+    CUSTOM MOUSE FOLLOWER
+  ============================== */
+    const cursor = $('.cursor-glow');
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let currentX = 0;
+    let currentY = 0;
+
+    $(document).on('mousemove', function (e) {
+
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        cursor.addClass('active');
+
+    });
+
+    function animateCursor() {
+
+        currentX += (mouseX - currentX) * 0.32;
+        currentY += (mouseY - currentY) * 0.32;
+
+        cursor.css({
+            left: currentX + 'px',
+            top: currentY + 'px'
+        });
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+    $(document).on('mouseleave', function () {
+        cursor.removeClass('active');
+    });
+
+    $(document).on('mouseenter', function () {
+        cursor.addClass('active');
+    });
+
 });

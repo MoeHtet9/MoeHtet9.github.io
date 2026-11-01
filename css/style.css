@@ -919,3 +919,168 @@ a {
     transition-duration:.01ms!important
   }
 }
+
+/* =================================
+   ANIMATED BLUE WAVE BACKGROUND
+================================= */
+
+.wave-background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: #030917;
+}
+
+/* Aurora Glow */
+
+.aurora {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+}
+
+.aurora-one {
+    top: 10%;
+    left: -10%;
+    background: #005eff;
+    animation: auroraMove 12s ease-in-out infinite alternate;
+}
+
+.aurora-two {
+    right: -10%;
+    bottom: 0;
+    background: #00aaff;
+    animation: auroraMove 15s ease-in-out infinite alternate-reverse;
+}
+
+/* SVG Waves */
+
+.wave-svg {
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    top: 0;
+    left: -25%;
+    opacity: 0.8;
+}
+
+.wave {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 15 20;
+    animation: waveFlow 12s linear infinite;
+}
+
+.wave-one {
+    stroke: rgba(0, 110, 255, 0.5);
+}
+
+.wave-two {
+    stroke: rgba(0, 180, 255, 0.35);
+    animation-duration: 18s;
+}
+
+.wave-three {
+    stroke: rgba(40, 100, 255, 0.3);
+    animation-duration: 15s;
+}
+
+/* Animations */
+
+@keyframes waveFlow {
+    from {
+        stroke-dashoffset: 0;
+        transform: translateX(0);
+    }
+
+    to {
+        stroke-dashoffset: -300;
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes auroraMove {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(150px, 80px) scale(1.3);
+    }
+}
+
+/* Keep Website Content Above Background */
+
+body > *:not(.wave-background):not(.back-top) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile Optimization */
+
+@media (max-width: 768px) {
+    .aurora {
+        width: 300px;
+        height: 300px;
+        filter: blur(90px);
+    }
+
+    .wave-svg {
+        width: 200%;
+        left: -50%;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .aurora,
+    .wave {
+        animation: none;
+    }
+}
+
+/* ==============================
+   CUSTOM MOUSE GLOW
+============================== */
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 119, 255, 0.25);
+
+    box-shadow:
+        0 0 15px #087cff,
+        0 0 35px #087cff,
+        0 0 65px rgba(0, 119, 255, 0.5);
+
+    pointer-events: none;
+    z-index: 9999;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    will-change: transform;
+}
+
+.cursor-glow.active {
+    opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-glow {
+        display: none;
+    }
+}
