@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chinese 32 Strokes — Stroke Master</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root {
+    --navy: #183b63;
+    --navy-dark: #17365d;
+    --blue: #2563eb;
+    --blue-mid: #28639b;
+    --blue-light: #7aa8ff;
+    --pale: #eff6ff;
+    --bg-body: #f5f7fb;
+    --bg-tile-hover: #f7faff;
+    --white: #ffffff;
+    --ink: #172334;
+    --muted: #718096;
+    --muted-light: #7b8798;
+    --sub-text: #d9e8fa;
+    --line: #e6edf5;
+    --guide-line: #dbe4ef;
+    --checker-bg: #f5f7fa;
+  }
+
+  /* Base & Layout */
+  body {
+    background-color: var(--bg-body);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  .wrap {
+    max-width: 1100px;
+  }
+
+  .top {
+    background: linear-gradient(120deg, var(--navy-dark), var(--blue-mid));
+    color: var(--white);
+    padding: 28px 0;
+  }
+
+  .brand {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .sub {
+    color: var(--sub-text);
+  }
+
+  .muted {
+    color: var(--muted);
+  }
+
+  .btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+  }
+
+  /* Panels & Stroke Tiles */
+  .panel,
+  .stroke-tile {
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    box-shadow: 0 5px 18px rgba(20, 45, 80, 0.04);
+  }
+
+  .stroke-tile {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.18s ease;
+  }
+
+  .stroke-tile:hover,
+  .stroke-tile.active {
+    border-color: var(--blue-light);
+    background-color: var(--bg-tile-hover);
+    transform: translateY(-2px);
+  }
+
+  .tile-svg {
+    width: 100%;
+    height: 90px;
+  }
+
+  .tile-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .tile-num {
+    color: var(--muted-light);
+    font-size: 0.72rem;
+  }
+
+  /* Drawing Stage & SVG */
+  .stage {
+    max-width: 380px;
+    margin: auto;
+    background-color: var(--white);
+    background-image: 
+      linear-gradient(45deg, var(--checker-bg) 25%, transparent 25%),
+      linear-gradient(-45deg, var(--checker-bg) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--checker-bg) 75%),
+      linear-gradient(-45deg, transparent 75%, var(--checker-bg) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+  }
+
+  .big-svg {
+    width: 100%;
+    display: block;
+  }
+
+  .guide {
+    stroke: var(--guide-line);
+    stroke-width: 1;
+    stroke-dasharray: 4 5;
+  }
+
+  .stroke-path {
+    fill: none;
+    stroke: var(--navy);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 575px) {
+    .top {
+      padding: 22px 0;
+    }
+
+    .tile-svg {
+      height: 72px;
+    }
+
+    .stroke-tile {
+      padding: 8px 5px;
+    }
+  }
+</style>
+</head>
+<body>
+    <header class="top">
+    <div class="container wrap">
+        <div class="brand fs-4">汉 Stroke Master</div>
+        <div class="sub mt-1">Learn the 32 strokes one by one • Animated stroke guide</div>
+    </div>
+    </header>
+
+    <main class="container wrap py-4">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
+        <div>
+        <div class="text-primary fw-bold small">STROKE LIBRARY</div>
+        <h1 class="h3 fw-bold mb-1">32 Basic Stroke Shapes</h1>
+        <p class="muted mb-0 small">Choose a shape to watch its drawing animation.</p>
+        </div>
+        <span class="badge rounded-pill text-bg-primary px-3 py-2">32 strokes</span>
+    </div>
+
+    <!-- Main Grid Section -->
+    <div class="row g-3">
+        <!-- Stroke Grid List -->
+        <div class="col-lg-7">
+        <div class="row row-cols-4 row-cols-sm-5 g-2" id="strokeGrid"></div>
+        </div>
+
+        <!-- Stroke Preview & Controls Panel -->
+        <div class="col-lg-5">
+        <div class="panel p-3 p-md-4 sticky-lg-top" style="top: 15px;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge text-bg-primary" id="number">STROKE 01 / 32</span>
+            <span class="small muted">Animated guide</span>
+            </div>
+            
+            <h2 class="h4 fw-bold mb-1" id="strokeName">Horizontal</h2>
+            <p class="muted small mb-3" id="strokeDesc">Watch the stroke being drawn from start to finish.</p>
+            
+            <!-- SVG Stage -->
+            <div class="stage">
+            <svg class="big-svg" viewBox="0 0 100 100" role="img" aria-label="Animated stroke">
+                <path class="guide" d="M50 5V95 M5 50H95" />
+                <path id="animatedPath" class="stroke-path" d="M15 50 L85 50" />
+            </svg>
+            </div>
+            
+            <!-- Controls -->
+            <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
+            <button class="btn btn-primary rounded-pill px-4" id="play"><span>▶</span> Play</button>
+            <button class="btn btn-outline-primary rounded-pill" id="restart">↻ Replay</button>
+            <button class="btn btn-outline-secondary rounded-pill" id="prev">← Previous</button>
+            <button class="btn btn-outline-secondary rounded-pill" id="next">Next →</button>
+            </div>
+            
+            <!-- Speed Range -->
+            <div class="mt-3">
+            <div class="d-flex justify-content-between small muted mb-1">
+                <span>Animation speed</span>
+                <span id="speedLabel">Normal</span>
+            </div>
+            <input type="range" class="form-range" min="0.5" max="2" step="0.25" value="1" id="speed">
+            </div>
+            
+            <!-- Note -->
+            <div class="alert alert-light border small mt-3 mb-0">
+            Note: These are simplified animated tracing guides based on the 32 shapes in your handwritten reference. Stroke names and exact standard Chinese stroke classifications may differ.
+            </div>
+        </div>
+        </div>
+    </div>
+    </main>
+
+    <script>
+        const strokes = [
+            { id: 1, name: 'Horizontal', path: 'M15 50 L85 50' },
+            { id: 2, name: 'Vertical', path: 'M50 12 L50 88' },
+            { id: 3, name: 'Left-falling', path: 'M78 12 Q68 58 28 88' },
+            { id: 4, name: 'Right-falling', path: 'M22 12 Q32 58 72 88' },
+            { id: 5, name: 'Dot', path: 'M48 42 Q54 48 60 54' },
+            { id: 6, name: 'Rising', path: 'M22 78 L78 22' },
+            { id: 7, name: 'Horizontal turn', path: 'M15 30 L78 30 L78 85' },
+            { id: 8, name: 'Vertical turn', path: 'M25 15 L25 78 L82 78' },
+            { id: 9, name: 'Slant turn', path: 'M18 78 L58 78 L82 25' },
+            { id: 10, name: 'Hook turn', path: 'M72 15 Q65 55 35 72 L55 88' },
+            { id: 11, name: 'Rising horizontal', path: 'M15 65 L80 65' },
+            { id: 12, name: 'Vertical hook', path: 'M55 12 L55 82 L35 90' },
+            { id: 13, name: 'Curved hook', path: 'M38 12 Q78 30 60 65 Q50 82 30 88' },
+            { id: 14, name: 'Curved falling hook', path: 'M25 12 Q25 62 65 85 L78 72' },
+            { id: 15, name: 'Horizontal hook', path: 'M15 30 L78 30 L78 78 L62 88' },
+            { id: 16, name: 'Horizontal bend hook', path: 'M15 28 L75 28 L75 65 Q75 82 58 82' },
+            { id: 17, name: 'Vertical left turn', path: 'M55 12 L55 80 L35 90' },
+            { id: 18, name: 'Vertical right turn', path: 'M30 12 L30 72 Q30 86 48 86 L78 86' },
+            { id: 19, name: 'Curved rising', path: 'M20 68 Q45 88 78 72' },
+            { id: 20, name: 'Horizontal fold', path: 'M15 25 L78 25 L78 80 L60 90' },
+            { id: 21, name: 'Horizontal hook bend', path: 'M15 25 L75 25 L75 55 L55 55 L75 85' },
+            { id: 22, name: 'Horizontal zigzag', path: 'M15 25 L75 25 L55 48 L78 48 L78 85' },
+            { id: 23, name: 'Vertical bend', path: 'M35 12 L35 75 L65 75 L65 90' },
+            { id: 24, name: 'Horizontal curved bend', path: 'M15 25 L78 25 Q60 40 45 55 L75 82' },
+            { id: 25, name: 'Horizontal bend', path: 'M15 25 L78 25 L58 48 L78 78' },
+            { id: 26, name: 'Vertical hook turn', path: 'M50 12 L50 78 L72 88' },
+            { id: 27, name: 'Vertical zigzag', path: 'M35 12 L75 12 L52 42 L75 42 L75 88' },
+            { id: 28, name: 'Horizontal zigzag hook', path: 'M15 25 L78 25 L55 48 L78 48 L78 82 L60 90' },
+            { id: 29, name: 'Curved vertical hook', path: 'M45 12 Q40 48 55 70 L75 88' },
+            { id: 30, name: 'Horizontal hook', path: 'M15 25 L78 25 L78 82 L58 90' },
+            { id: 31, name: 'Slant hook', path: 'M75 12 L55 48 L35 65 L58 88' },
+            { id: 32, name: 'Vertical curve', path: 'M42 12 L42 70 Q42 88 65 88' }
+        ];
+
+        let selected = 0;
+        let timer = null;
+        let progress = 0;
+        let speed = 1;
+        let playing = false;
+
+        const $ = id => document.getElementById(id);
+
+        // Generate SVG for grid items
+        function makeSvg(path, cls = "stroke-path") {
+            return `<svg class="tile-svg" viewBox="0 0 100 100" aria-hidden="true"><path d="${path}" class="${cls}"/></svg>`;
+        }
+
+        // Render stroke grid
+        function drawGrid() {
+            $('strokeGrid').innerHTML = strokes.map((s, i) => `
+            <div class="col">
+                <button type="button" class="stroke-tile w-100 ${i === selected ? 'active' : ''}" data-i="${i}" aria-label="Select stroke ${i + 1}">
+                ${makeSvg(s.path)}
+                <div class="tile-num">STROKE ${String(i + 1).padStart(2, '0')}</div>
+                <div class="tile-name">${s.name}</div>
+                </button>
+            </div>
+            `).join('');
+
+            document.querySelectorAll('.stroke-tile').forEach(b => {
+            b.addEventListener('click', () => selectStroke(Number(b.dataset.i)));
+            });
+        }
+
+        // Select a specific stroke
+        function selectStroke(i) {
+            stop();
+            selected = (i + 32) % 32;
+            progress = 0;
+
+            drawGrid();
+
+            $('number').textContent = `STROKE ${String(selected + 1).padStart(2, '0')} / 32`;
+            $('strokeName').textContent = strokes[selected].name;
+            $('animatedPath').setAttribute('d', strokes[selected].path);
+
+            preparePath();
+            $('play').innerHTML = '▶ Play';
+        }
+
+        // Prepare SVG path for animation
+        function preparePath() {
+            const p = $('animatedPath');
+            const len = p.getTotalLength();
+            p.style.strokeDasharray = len;
+            p.style.strokeDashoffset = len;
+        }
+
+        // Stop animation
+        function stop() {
+            if (timer) cancelAnimationFrame(timer);
+            timer = null;
+            playing = false;
+        }
+
+        // Animation loop
+        function animate(ts) {
+            if (!playing) return;
+
+            const p = $('animatedPath');
+            const len = p.getTotalLength();
+
+            progress += 0.012 * speed;
+            p.style.strokeDashoffset = len * (1 - Math.min(progress, 1));
+
+            if (progress >= 1) {
+            stop();
+            $('play').innerHTML = '↻ Replay';
+            return;
+            }
+
+            timer = requestAnimationFrame(animate);
+        }
+
+        // Play / Pause toggle
+        function play() {
+            if (playing) {
+            stop();
+            $('play').innerHTML = '▶ Resume';
+            return;
+            }
+
+            if (progress >= 1) progress = 0;
+
+            playing = true;
+            $('play').innerHTML = 'Ⅱ Pause';
+            timer = requestAnimationFrame(animate);
+        }
+
+        // Event Listeners
+        $('play').addEventListener('click', play);
+
+        $('restart').addEventListener('click', () => {
+            stop();
+            progress = 0;
+            preparePath();
+            $('play').innerHTML = '▶ Play';
+        });
+
+        $('prev').addEventListener('click', () => selectStroke(selected - 1));
+        $('next').addEventListener('click', () => selectStroke(selected + 1));
+
+        $('speed').addEventListener('input', e => {
+            speed = Number(e.target.value);
+            $('speedLabel').textContent = speed < 1 ? 'Slow' : speed > 1 ? 'Fast' : 'Normal';
+        });
+
+        // Initialize
+        selectStroke(0);
+    </script>
+</body>
+</html>
